@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>La Fábrica de Leads - Automatización Avanzada B2B y Prospección Inteligente</title>
+    <meta name="description"
+        content="Sistema de prospección perpetua B2B y gestión para atención inteligente de negocios y empresas. Automatización avanzada para negocios B2B y fábricas." />
+    <meta name="keywords"
+        content="Fábrica de Leads, Automatización Avanzada Para Negocios B2B, Sistema de prospección perpetua B2B, Prospección inteligente para negocios y empresas, gestión para atención inteligentes de negocio y empresas" />
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="La Fábrica de Leads - Máquina de Ventas 24/7" />
+    <meta property="og:description"
+        content="Automatice sus Ventas, Prospección y Atención al Cliente. Sistema llave en mano para optimizar su negocio B2B." />
+    <meta property="og:image" content="images/kanban.png" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                        "surface-dark": "#1b2333",
+                        "accent-orange": "#f97316",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass-card {
+            background: rgba(27, 35, 51, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(13, 89, 242, 0.3);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+    <!-- Top Navigation -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <span class="material-symbols-outlined text-white text-2xl">factory</span>
+                </div>
+                <h2 class="text-xl font-bold tracking-tight">La Fábrica <span
+                        class="text-primary text-sm uppercase tracking-widest block leading-none">de Leads</span></h2>
+            </div>
+            <nav class="hidden md:flex items-center gap-10">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#soluciones"
+                    data-i18n="nav-sol">Soluciones</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#ecosistema"
+                    data-i18n="nav-eco">Ecosistema</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#plataforma"
+                    data-i18n="nav-plat">Plataforma</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#precios"
+                    data-i18n="nav-price">Precios</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <!-- Language Switcher -->
+                <div class="flex items-center gap-2 mr-4 border-r border-slate-700 pr-4">
+                    <button onclick="changeLanguage('es')"
+                        class="text-xs font-bold hover:text-primary transition-colors">ES</button>
+                    <span class="text-slate-600 text-xs">|</span>
+                    <button onclick="changeLanguage('pt')"
+                        class="text-xs font-bold hover:text-primary transition-colors">PT</button>
+                    <span class="text-slate-600 text-xs">|</span>
+                    <button onclick="changeLanguage('en')"
+                        class="text-xs font-bold hover:text-primary transition-colors">EN</button>
+                </div>
+                <a href="https://wa.me/5491126839849?text=Hola%2C%20quisiera%20solicitar%20una%20auditor%C3%ADa%0A"
+                    target="_blank"
+                    class="hidden lg:flex px-6 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold text-sm transition-all glow-blue"
+                    data-i18n="nav-cta">
+                    Solicitar Auditoría
+                </a>
+                <button class="md:hidden text-slate-400">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="relative pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative z-10">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-6">
+                        <span class="relative flex h-2 w-2">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
+                        </span>
+                        Automatización de Ventas B2B
+                    </div>
+                    <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-8" data-i18n="hero-title">
+                        Convierta su Empresa en una <span class="text-primary">Máquina de Ventas</span> 24/7
+                    </h1>
+                    <p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-10 max-w-xl"
+                        data-i18n="hero-sub">
+                        Automatice sus Ventas, Prospección y Atención al Cliente desde un solo lugar. Conecte WhatsApp,
+                        IG, FB, Mercado Libre y todos sus canales digitales en un ecosistema llave en mano.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://wa.me/5491126839849?text=Hola%2C%20quisiera%20solicitar%20una%20auditor%C3%ADa%20de%20mercado%0A"
+                            target="_blank"
+                            class="px-8 py-4 bg-primary text-white font-bold rounded-lg text-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2"
+                            data-i18n="hero-cta-main">
+                            Solicitar Auditoría de Mercado
+                            <span class="material-symbols-outlined">trending_up</span>
+                        </a>
+                        <a href="#precios"
+                            class="px-8 py-4 border border-slate-300 dark:border-slate-700 font-bold rounded-lg text-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center"
+                            data-i18n="hero-cta-sec">
+                            Ver Planes
+                        </a>
+                    </div>
+                </div>
+                <div class="relative lg:block">
+                    <div class="absolute -inset-10 bg-primary/20 blur-[120px] rounded-full"></div>
+                    <div
+                        class="relative rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-2xl bg-surface-dark/40 backdrop-blur-sm">
+                        <img class="w-full h-auto opacity-80" alt="Plataforma de Ventas Repleta de Leads"
+                            src="images/kanban.png" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pain Points Section -->
+        <section class="py-24 bg-slate-50 dark:bg-[#0a0f1a]" id="soluciones">
+            <div class="max-w-7xl mx-auto px-6 text-center mb-16">
+                <h2 class="text-3xl lg:text-5xl font-bold mb-4" data-i18n="pain-title">Deje de perder oportunidades
+                    comerciales</h2>
+                <p class="text-slate-500 max-w-2xl mx-auto" data-i18n="pain-sub">La ineficiencia en la gestión de
+                    pedidos le cuesta miles de
+                    dólares en ventas perdidas.</p>
+            </div>
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+                <div
+                    class="p-8 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+                    <div
+                        class="w-14 h-14 bg-red-500/10 text-red-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">cancel_presentation</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Pedidos perdidos</h3>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Un mensaje no respondido en 5 minutos
+                        en WhatsApp o IG es una venta que se lleva su competencia.</p>
+                </div>
+                <div
+                    class="p-8 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+                    <div
+                        class="w-14 h-14 bg-amber-500/10 text-amber-500 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">group_remove</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Vendedores saturados</h3>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed">Su equipo pierde el 60% de su tiempo
+                        en tareas administrativas manuales en lugar de cerrar negocios.</p>
+                </div>
+                <div
+                    class="p-8 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
+                    <div
+                        class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined text-3xl">map</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Falta de expansión</h3>
+                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed">No saber dónde están sus clientes
+                        potenciales impide que su negocio crezca estratégicamente.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Value Proposition (The Ecosystem) -->
+        <section class="py-24 overflow-hidden" id="ecosistema">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="mb-20">
+                    <span class="text-primary font-bold uppercase tracking-widest text-sm" data-i18n="eco-tag">Nuestra
+                        Metodología</span>
+                    <h2 class="text-4xl lg:text-5xl font-black mt-4" data-i18n="eco-title">El Ecosistema: Su Ventaja
+                        Competitiva</h2>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Layer A -->
+                    <div class="relative p-10 rounded-3xl bg-primary/5 border border-primary/20 overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-10">
+                            <span class="material-symbols-outlined text-9xl">hub</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span
+                                    class="bg-primary text-white px-3 py-1 rounded text-xs font-bold uppercase">Starter</span>
+                                <h3 class="text-2xl font-bold">Capa A: Recepción Inteligente</h3>
+                            </div>
+                            <p class="text-slate-400 mb-8 text-lg">Optimice la entrada de datos y nunca pierda un
+                                contacto inicial de ningún canal digital.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">chat</span>
+                                    <span>Consolidación total (WA, IG, FB, Mercado Libre)</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">psychology</span>
+                                    <span>Clasificación por IA de intención de compra</span>
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="material-symbols-outlined text-primary">category</span>
+                                    <span>Catálogos interactivos automatizados</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Layer B -->
+                    <div class="relative p-10 rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden">
+                        <div class="absolute top-0 right-0 p-8 opacity-10">
+                            <span class="material-symbols-outlined text-9xl">rocket_launch</span>
+                        </div>
+                        <div class="relative z-10">
+                            <div class="flex items-center gap-3 mb-6">
+                                <span
+                                    class="bg-accent-orange text-white px-3 py-1 rounded text-xs font-bold uppercase">Avanzado</span>
+                                <h3 class="text-2xl font-bold">Capa B: Prospección Activa</h3>
+                            </div>
+                            <p class="text-slate-400 mb-8 text-lg">No espere a que el cliente lo busque. Salga a
+                                conquistar el mercado con tecnología.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-3 text-slate-200">
+                                    <span class="material-symbols-outlined text-accent-orange">radar</span>
+                                    <span>Escaneo automático de mercado para nuevos prospectos</span>
+                                </li>
+                                <li class="flex items-center gap-3 text-slate-200">
+                                    <span class="material-symbols-outlined text-accent-orange">person_search</span>
+                                    <span>Enriquecimiento de perfiles comerciales</span>
+                                </li>
+                                <li class="flex items-center gap-3 text-slate-200">
+                                    <span class="material-symbols-outlined text-accent-orange">rebase_edit</span>
+                                    <span>Sistemas de re-engagement automatizados</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Platform Preview -->
+        <section class="py-24 bg-background-dark" id="plataforma">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl font-bold mb-6" data-i18n="plat-title">Control Total en una Interfaz Moderna
+                    </h2>
+                    <p class="text-slate-400 max-w-2xl mx-auto" data-i18n="plat-sub">Visualice su pipeline de ventas con
+                        claridad meridiana y
+                        tome decisiones basadas en datos reales.</p>
+                </div>
+                <div class="grid lg:grid-cols-1 gap-12 items-start">
+                    <div
+                        class="rounded-2xl border border-slate-800 overflow-hidden shadow-2xl bg-surface-dark/40 backdrop-blur-sm">
+                        <img class="w-full h-auto" alt="Inbox Multicanal Activo" src="images/inbox.png" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing Table -->
+        <section class="py-24" id="precios">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl lg:text-5xl font-black mb-6" data-i18n="price-title">Planes Llave en Mano</h2>
+                    <div class="inline-block px-4 py-2 bg-accent-orange/10 border border-accent-orange/30 text-accent-orange rounded-full font-bold text-sm animate-pulse"
+                        data-i18n="price-tag">
+                        SISTEMAS LISTOS PARA USAR - CONEXIÓN API INCLUIDA
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Starter Plan -->
+                    <div
+                        class="p-10 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark transition-all hover:scale-[1.02]">
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold mb-2">Plan STARTER</h3>
+                            <p class="text-slate-500 text-sm">Turnkey: Listo para vender</p>
+                        </div>
+                        <div class="mb-8">
+                            <div class="text-slate-400 text-sm mb-1">Setup: $249 USD</div>
+                            <div class="text-4xl font-black">$199 <span class="text-lg text-slate-500 font-normal">/
+                                    mes</span></div>
+                        </div>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                <b>Contactos ILIMITADOS</b>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                Inbox (WhatsApp, IG, FB, ML)
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                Automatización y Conexión API
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                Soporte e Instalación Llave en Mano
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5491126839849?text=Hola%2C%20quisiera%20comenzar%20con%20el%20Plan%20Starter%0A"
+                            target="_blank"
+                            class="inline-block w-full text-center py-4 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded-xl transition-all"
+                            data-i18n="plan-starter-cta">
+                            Comenzar ahora
+                        </a>
+                    </div>
+                    <!-- Advanced Plan -->
+                    <div
+                        class="p-10 rounded-3xl border-2 border-primary bg-primary/5 relative transition-all hover:scale-[1.02]">
+                        <div
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-[10px] font-bold uppercase rounded-full tracking-widest">
+                            MÁS ELEGIDO
+                        </div>
+                        <div class="mb-8">
+                            <h3 class="text-2xl font-bold mb-2">Plan AVANZADO</h3>
+                            <p class="text-primary text-sm font-semibold">Crecimiento Continuo</p>
+                        </div>
+                        <div class="mb-8">
+                            <div class="text-slate-400 text-sm mb-1">Setup: $999 USD</div>
+                            <div class="text-4xl font-black">$997 <span class="text-lg text-slate-500 font-normal">/
+                                    mes</span></div>
+                        </div>
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                <b>Todo en Starter</b>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                Prospección Activa Perpetua
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                IA de Clasificación Avanzada
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
+                                Entrenamiento de IA Personalizado
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5491126839849?text=Hola%2C%20quisiera%20comenzar%20con%20el%20Plan%20Avanzado%0A"
+                            target="_blank"
+                            class="inline-block w-full text-center py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/30 hover:scale-[1.02] transition-all"
+                            data-i18n="plan-adv-cta">
+                            Quiero Escalar mi Negocio
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Final CTA -->
+        <section class="py-24 bg-primary">
+            <div class="max-w-4xl mx-auto px-6 text-center text-white">
+                <h2 class="text-4xl lg:text-6xl font-black mb-8" data-i18n="final-title">¿Listo para encender su motor
+                    de ventas?</h2>
+                <p class="text-xl text-white/80 mb-12" data-i18n="final-sub">No deje que la competencia se lleve los
+                    clientes que su negocio
+                    merece.</p>
+                <a href="https://wa.me/5491130164250?text=Hola%2C%20quisiera%20agendar%20mi%20auditor%C3%ADa%20gratuita%0A"
+                    target="_blank"
+                    class="inline-block px-10 py-5 bg-white text-primary font-black rounded-xl text-xl hover:shadow-2xl transition-all"
+                    data-i18n="final-cta">
+                    Agendar mi Auditoría Gratuita
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="py-12 border-t border-slate-200 dark:border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="bg-primary p-1.5 rounded-lg">
+                    <span class="material-symbols-outlined text-white text-xl">factory</span>
+                </div>
+                <h2 class="text-lg font-bold tracking-tight">La Fábrica de Leads</h2>
+            </div>
+            <p class="text-slate-500 text-sm" data-i18n="footer-copy">© 2026 La Fábrica de Leads. Todos los derechos
+                reservados.</p>
+            <div class="flex gap-6">
+                <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="terminos.html"
+                    data-i18n="footer-terms">Términos</a>
+                <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="privacidad.html"
+                    data-i18n="footer-priv">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        const translations = {
+            es: {
+                "nav-sol": "Soluciones",
+                "nav-eco": "Ecosistema",
+                "nav-plat": "Plataforma",
+                "nav-price": "Precios",
+                "nav-cta": "Solicitar Auditoría",
+                "hero-title": "Convierta su Empresa en una <span class='text-primary'>Máquina de Ventas</span> 24/7",
+                "hero-sub": "Automatice sus Ventas, Prospección y Atención al Cliente desde un solo lugar. Conecte WhatsApp, IG, FB, Mercado Libre y todos sus canales digitales en un ecosistema llave en mano.",
+                "hero-cta-main": "Solicitar Auditoría de Mercado",
+                "hero-cta-sec": "Ver Planes",
+                "pain-title": "Deje de perder oportunidades comerciales",
+                "pain-sub": "La ineficiencia en la gestión de pedidos le cuesta miles de dólares en ventas perdidas.",
+                "eco-tag": "Nuestra Metodología",
+                "eco-title": "El Ecosistema: Su Ventaja Competitiva",
+                "plat-title": "Control Total en una Interfaz Moderna",
+                "plat-sub": "Visualice su pipeline de ventas con claridad meridiana y tome decisiones basadas en datos reales.",
+                "price-title": "Planes Llave en Mano",
+                "price-tag": "SISTEMAS LISTOS PARA USAR - CONEXIÓN API INCLUIDA",
+                "plan-starter-cta": "Comenzar ahora",
+                "plan-adv-cta": "Quiero Escalar mi Negocio",
+                "final-cta": "Agendar mi Auditoría Gratuita",
+                "final-title": "¿Listo para encender su motor de ventas?",
+                "final-sub": "No deje que la competencia se lleve los clientes que su negocio merece.",
+                "footer-copy": "© 2026 La Fábrica de Leads. Todos los derechos reservados.",
+                "footer-terms": "Términos",
+                "footer-priv": "Privacidad"
+            },
+            pt: {
+                "nav-sol": "Soluções",
+                "nav-eco": "Ecossistema",
+                "nav-plat": "Plataforma",
+                "nav-price": "Preços",
+                "nav-cta": "Solicitar Auditoria",
+                "hero-title": "Converta sua Empresa em uma <span class='text-primary'>Máquina de Vendas</span> 24/7",
+                "hero-sub": "Automatize suas Vendas, Prospecção e Atendimento ao Cliente em um só lugar. Conecte WhatsApp, IG, FB, Mercado Livre e todos os seus canais digitais em um ecossistema pronto para usar.",
+                "hero-cta-main": "Solicitar Auditoria de Mercado",
+                "hero-cta-sec": "Ver Planos",
+                "pain-title": "Pare de perder oportunidades comerciais",
+                "pain-sub": "A ineficiência na gestão de pedidos custa milhares de dólares em vendas perdidas.",
+                "eco-tag": "Nossa Metodologia",
+                "eco-title": "O Ecossistema: Sua Vantagem Competitiva",
+                "plat-title": "Controle Total em uma Interface Moderna",
+                "plat-sub": "Visualize seu pipeline de vendas com clareza e tome decisões baseadas em dados reais.",
+                "price-title": "Planos Prontos para Usar",
+                "price-tag": "SISTEMAS PRONTOS PARA USO - CONEXÃO API INCLUÍDA",
+                "plan-starter-cta": "Começar agora",
+                "plan-adv-cta": "Quero Escalar meu Negocio",
+                "final-cta": "Agendar minha Auditoria Gratuita",
+                "final-title": "Pronto para ligar seu motor de vendas?",
+                "final-sub": "Não deixe a concorrência levar os clientes que seu negócio merece.",
+                "footer-copy": "© 2026 La Fábrica de Leads. Todos os direitos reservados.",
+                "footer-terms": "Termos",
+                "footer-priv": "Privacidade"
+            },
+            en: {
+                "nav-sol": "Solutions",
+                "nav-eco": "Ecosystem",
+                "nav-plat": "Platform",
+                "nav-price": "Pricing",
+                "nav-cta": "Request Audit",
+                "hero-title": "Convert your Company into a <span class='text-primary'>Sales Machine</span> 24/7",
+                "hero-sub": "Automate your Sales, Prospecting and Customer Service in one place. Connect WhatsApp, IG, FB, Mercado Libre and all your digital channels in a turnkey ecosystem.",
+                "hero-cta-main": "Request Market Audit",
+                "hero-cta-sec": "View Plans",
+                "pain-title": "Stop losing business opportunities",
+                "pain-sub": "Inefficiency in order management costs you thousands of dollars in lost sales.",
+                "eco-tag": "Our Methodology",
+                "eco-title": "The Ecosystem: Your Competitive Advantage",
+                "plat-title": "Total Control in a Modern Interface",
+                "plat-sub": "Visualize your sales pipeline with clear clarity and make decisions based on real data.",
+                "price-title": "Turnkey Plans",
+                "price-tag": "READY TO USE SYSTEMS - API CONNECTION INCLUDED",
+                "plan-starter-cta": "Start now",
+                "plan-adv-cta": "I Want to Scale my Business",
+                "final-cta": "Schedule my Free Audit",
+                "final-title": "Ready to fire up your sales engine?",
+                "final-sub": "Don't let the competition take the customers your business deserves.",
+                "footer-copy": "© 2026 La Fábrica de Leads. All rights reserved.",
+                "footer-terms": "Terms",
+                "footer-priv": "Privacy"
+            }
+        };
+
+        function changeLanguage(lang) {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+
+</html>
