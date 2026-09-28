@@ -1,579 +1,1050 @@
 <!DOCTYPE html>
-<html class="dark" lang="es">
+<html class="dark scroll-smooth" lang="es">
 
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>STI ESTUDIO - Automatización Avanzada B2B y Prospección Inteligente</title>
+    <title>STI ESTUDIO — Posicionamiento de Marca, Satélites & Prospección Perpetua</title>
     <meta name="description"
-        content="Sistema de prospección perpetua B2B y gestión para atención inteligente de negocios y empresas. Automatización avanzada para negocios B2B y fábricas." />
+        content="Infraestructura integral de visibilidad y demanda para Fabricantes, Importadores, Mayoristas (B2B) y E-Commerce de Alta Escala (B2C). Red de satélites, validación algorítmica y prospección perpetua." />
     <meta name="keywords"
-        content="Fábrica de Leads, Automatización Avanzada Para Negocios B2B, Sistema de prospección perpetua B2B, Prospección inteligente para negocios y empresas, gestión para atención inteligentes de negocio y empresas" />
+        content="STI Estudio, Posicionamiento de Marca, Prospección Perpetua, B2B, Mayoristas, Importadores, Fabricantes, E-Commerce, Red de Satélites Replicadores, Fábrica de Creativos Anti-Hash" />
 
     <!-- Open Graph / SEO -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="STI ESTUDIO - Máquina de Ventas 24/7" />
+    <meta property="og:title" content="STI ESTUDIO — Posicionamiento de Marca & Prospección Perpetua" />
     <meta property="og:description"
-        content="Automatice sus Ventas, Prospección y Atención al Cliente. Sistema llave en mano para optimizar su negocio B2B." />
+        content="Infraestructura avanzada para Fabricantes, Importadores, Mayoristas (B2B) y E-Commerce de Alta Escala (B2C). Conecte Redes Satélites, Prospección y CRM en un ecosistema llave en mano." />
     <meta property="og:image" content="images/kanban.png" />
 
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
-        rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-        rel="stylesheet" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/png" href="favicon.png" />
-    <script id="tailwind-config">
+
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#0d59f2",
-                        "background-light": "#f5f6f8",
-                        "background-dark": "#101622",
-                        "surface-dark": "#1b2333",
-                        "accent-orange": "#f97316",
+                        "primary-blue": "#0d59f2",
+                        "cyan-glow": "#00F2FF",
+                        "bg-dark": "#07090E",
+                        "surface-dark": "#0B111E",
+                        "card-dark": "#101726",
                     },
                     fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
-                },
-            },
+                        "sans": ["Inter", "sans-serif"],
+                        "heading": ["Plus Jakarta Sans", "sans-serif"],
+                        "mono": ["JetBrains Mono", "monospace"]
+                    }
+                }
+            }
         }
     </script>
+
     <style>
+        :root {
+            --cyan: #00F2FF;
+            --blue: #0d59f2;
+            --dark: #07090E;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
+            background-color: var(--dark);
+            color: #E2E8F0;
+            overflow-x: hidden;
+        }
+
+        .heading-font {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        .mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .glass {
+            background: rgba(11, 17, 30, 0.75);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .glass-card {
-            background: rgba(27, 35, 51, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, rgba(16, 23, 38, 0.7) 0%, rgba(10, 15, 26, 0.9) 100%);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(0, 242, 255, 0.45);
+            box-shadow: 0 0 35px rgba(0, 242, 255, 0.14);
+            transform: translateY(-3px);
+        }
+
+        .glow-cyan {
+            box-shadow: 0 0 45px rgba(0, 242, 255, 0.28);
+        }
+
+        .glow-cyan:hover {
+            box-shadow: 0 0 65px rgba(0, 242, 255, 0.48);
         }
 
         .glow-blue {
-            box-shadow: 0 0 20px rgba(13, 89, 242, 0.3);
+            box-shadow: 0 0 35px rgba(13, 89, 242, 0.35);
+        }
+
+        .hero-bg-gradient {
+            background: radial-gradient(circle at 50% 20%, rgba(13, 89, 242, 0.18) 0%, rgba(0, 242, 255, 0.06) 35%, rgba(7, 9, 14, 0.95) 70%, rgba(7, 9, 14, 1) 100%);
+        }
+
+        /* Range Slider */
+        input[type=range] {
+            -webkit-appearance: none;
+            background: #1B2438;
+            height: 6px;
+            border-radius: 3px;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            background: var(--cyan);
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(0, 242, 255, 0.85);
+            transition: transform 0.15s ease;
+        }
+
+        input[type=range]::-webkit-slider-thumb:hover {
+            transform: scale(1.18);
+        }
+
+        /* Language Switcher */
+        .lang-btn.active {
+            color: #FFFFFF;
+            border-bottom: 2px solid var(--cyan);
+            font-weight: 700;
+        }
+
+        .lang-btn {
+            color: #64748B;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            padding-bottom: 2px;
+        }
+
+        .lang-btn:hover {
+            color: var(--cyan);
         }
     </style>
 </head>
 
-<body
-    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
-    <!-- Top Navigation -->
-    <header
-        class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="bg-primary p-1.5 rounded-lg">
-                    <span class="material-symbols-outlined text-white text-2xl">factory</span>
+<body class="antialiased selection:bg-cyan-glow/30 selection:text-cyan-glow">
+
+    <!-- Top Navigation Bar -->
+    <header class="fixed top-0 inset-x-0 z-50 glass border-b border-white/5 py-4 px-6 md:px-12 flex justify-between items-center">
+        <a href="#" class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-glow to-primary-blue p-0.5 shadow-lg shadow-cyan-glow/20">
+                <div class="w-full h-full bg-[#07090E] rounded-[10px] flex items-center justify-center">
+                    <span class="text-cyan-glow font-mono font-bold text-sm">STI</span>
                 </div>
-                <h2 class="text-xl font-bold tracking-tight">STI <span
-                        class="text-primary text-sm uppercase tracking-widest block leading-none">ESTUDIO</span></h2>
             </div>
-            <nav class="hidden md:flex items-center gap-10">
-                <a class="text-sm font-medium hover:text-primary transition-colors" href="#soluciones"
-                    data-i18n="nav-sol">Soluciones</a>
-                <a class="text-sm font-medium hover:text-primary transition-colors" href="#ecosistema"
-                    data-i18n="nav-eco">Ecosistema</a>
-                <a class="text-sm font-medium hover:text-primary transition-colors" href="#plataforma"
-                    data-i18n="nav-plat">Plataforma</a>
-                <a class="text-sm font-medium hover:text-primary transition-colors" href="#precios"
-                    data-i18n="nav-price">Precios</a>
-            </nav>
-            <div class="flex items-center gap-4">
-                <!-- Language Switcher -->
-                <div class="flex items-center gap-2 mr-4 border-r border-slate-700 pr-4">
-                    <button onclick="changeLanguage('es')"
-                        class="text-xs font-bold hover:text-primary transition-colors">ES</button>
-                    <span class="text-slate-600 text-xs">|</span>
-                    <button onclick="changeLanguage('pt')"
-                        class="text-xs font-bold hover:text-primary transition-colors">PT</button>
-                    <span class="text-slate-600 text-xs">|</span>
-                    <button onclick="changeLanguage('en')"
-                        class="text-xs font-bold hover:text-primary transition-colors">EN</button>
-                </div>
-                <a href="https://wa.me/5491158432412?text=Hola%2C%20quisiera%20solicitar%20una%20auditor%C3%ADa%0A"
-                    target="_blank"
-                    class="hidden lg:flex px-6 py-2.5 bg-primary hover:bg-primary/90 text-white rounded-lg font-bold text-sm transition-all glow-blue"
-                    data-i18n="nav-cta">
-                    Solicitar Auditoría
-                </a>
-                <button class="md:hidden text-slate-400">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
+            <div>
+                <span class="heading-font font-black text-lg tracking-tight text-white block leading-tight">
+                    STI <span class="text-cyan-glow">ESTUDIO</span>
+                </span>
+                <span class="text-[10px] font-mono tracking-widest text-slate-400 uppercase" data-i18n="nav_sub">Posicionamiento & Prospección</span>
             </div>
+        </a>
+
+        <!-- Desktop Menu Links -->
+        <nav class="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wide text-slate-300">
+            <a href="#sectores" class="hover:text-cyan-glow transition-colors" data-i18n="nav_sectors">B2B & E-Commerce</a>
+            <a href="#ecosistema" class="hover:text-cyan-glow transition-colors" data-i18n="nav_ecosystem">Ecosistema Satélites</a>
+            <a href="#pilares" class="hover:text-cyan-glow transition-colors" data-i18n="nav_pillars">Pilares de Ingeniería</a>
+            <a href="#simulador" class="hover:text-cyan-glow transition-colors" data-i18n="nav_simulator">Simulador</a>
+            <a href="#modalidades" class="hover:text-cyan-glow transition-colors" data-i18n="nav_modalities">Modalidades</a>
+        </nav>
+
+        <!-- Language Switcher & Action CTA -->
+        <div class="flex items-center gap-5">
+            <div class="flex gap-2.5 text-xs font-mono tracking-wider">
+                <button onclick="setLanguage('es')" class="lang-btn active" id="btn-es">ES</button>
+                <button onclick="setLanguage('pt')" class="lang-btn" id="btn-pt">PT</button>
+                <button onclick="setLanguage('en')" class="lang-btn" id="btn-en">EN</button>
+            </div>
+
+            <a href="https://wa.me/5491158432412?text=Hola,%20deseo%20solicitar%20una%20Sesi%C3%B3n%20de%20Factibilidad%20y%20Diagn%C3%B3stico%20para%20mi%20empresa"
+                target="_blank"
+                class="hidden sm:inline-flex items-center gap-2 bg-gradient-to-r from-cyan-glow to-blue-500 text-black px-5 py-2.5 rounded-full font-bold text-xs hover:opacity-95 transition-all glow-cyan cursor-pointer">
+                <span data-i18n="nav_cta">Solicitar Diagnóstico</span>
+                <span class="material-symbols-outlined text-sm">trending_up</span>
+            </a>
         </div>
     </header>
+
     <main>
         <!-- Hero Section -->
-        <section class="relative pt-16 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
-            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-                <div class="relative z-10">
-                    <div
-                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-wider mb-6">
-                        <span class="relative flex h-2 w-2">
-                            <span
-                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
-                        </span>
-                        Automatización de Ventas B2B
+        <section class="relative min-h-screen flex items-center justify-center px-4 pt-28 pb-20 overflow-hidden hero-bg-gradient">
+            <div class="max-w-6xl text-center z-10 px-2">
+                <!-- Badge -->
+                <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-cyan-glow/30 bg-cyan-glow/10 backdrop-blur-md">
+                    <div class="w-2 h-2 rounded-full bg-cyan-glow animate-pulse"></div>
+                    <span class="mono text-cyan-glow tracking-wider text-[11px] md:text-xs uppercase font-bold" data-i18n="hero_badge">
+                        Infraestructura de Visibilidad & Prospección Activa
+                    </span>
+                </div>
+
+                <!-- Main Headline -->
+                <h1 class="heading-font text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[3.9rem] font-black mb-6 tracking-tight leading-[1.12] text-white max-w-6xl mx-auto">
+                    <span class="inline-block md:whitespace-nowrap" data-i18n="hero_title_p1">POSICIONAMIENTO DE MARCA</span><br class="hidden sm:inline" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-glow via-blue-400 to-indigo-500 inline-block md:whitespace-nowrap" data-i18n="hero_title_p2">
+                        & PROSPECCIÓN PERPETUA
+                    </span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-slate-300 text-base sm:text-xl md:text-2xl font-light max-w-4xl mx-auto mb-10 leading-relaxed">
+                    <span data-i18n="hero_sub_start">Infraestructura tecnológica integral para</span>
+                    <strong class="text-white font-semibold" data-i18n="hero_sub_highlight">Fabricantes, Importadores, Mayoristas (B2B)</strong> 
+                    <span data-i18n="hero_sub_middle">y</span> 
+                    <strong class="text-cyan-glow font-semibold" data-i18n="hero_sub_ecom">E-Commerce de Alta Escala (B2C)</strong><span data-i18n="hero_sub_end">. Multiplicamos la visibilidad de su marca, activamos distribución algorítmica con satélites y ejecutamos prospección perpetua llave en mano.</span>
+                </p>
+
+                <!-- Value Proposition Pills -->
+                <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-12 text-xs font-mono text-slate-300">
+                    <div class="px-4 py-2 rounded-xl glass flex items-center gap-2 border border-white/5">
+                        <span class="text-cyan-glow font-bold">✓</span> <span data-i18n="pill_1">Fábrica de Creativos Anti-Hash</span>
                     </div>
-                    <h1 class="text-5xl lg:text-7xl font-black leading-tight mb-8" data-i18n="hero-title">
-                        Convierta su Empresa en una <span class="text-primary">Máquina de Ventas</span> 24/7
-                    </h1>
-                    <p class="text-lg lg:text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-10 max-w-xl"
-                        data-i18n="hero-sub">
-                        Automatice sus Ventas, Prospección y Atención al Cliente desde un solo lugar. Conecte WhatsApp,
-                        IG, FB, Mercado Libre y todos sus canales digitales en un ecosistema llave en mano.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="https://wa.me/5491158432412?text=Hola%2C%20quisiera%20solicitar%20una%20auditor%C3%ADa%20de%20mercado%0A"
-                            target="_blank"
-                            class="px-8 py-4 bg-primary text-white font-bold rounded-lg text-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2"
-                            data-i18n="hero-cta-main">
-                            Solicitar Auditoría de Mercado
-                            <span class="material-symbols-outlined">trending_up</span>
-                        </a>
-                        <a href="#precios"
-                            class="px-8 py-4 border border-slate-300 dark:border-slate-700 font-bold rounded-lg text-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors flex items-center justify-center"
-                            data-i18n="hero-cta-sec">
-                            Ver Planes
-                        </a>
+                    <div class="px-4 py-2 rounded-xl glass flex items-center gap-2 border border-white/5">
+                        <span class="text-cyan-glow font-bold">✓</span> <span data-i18n="pill_2">Red de Satélites Replicadores & Boost</span>
+                    </div>
+                    <div class="px-4 py-2 rounded-xl glass flex items-center gap-2 border border-white/5">
+                        <span class="text-cyan-glow font-bold">✓</span> <span data-i18n="pill_3">Prospección Mayorista & CRM Multiagente</span>
                     </div>
                 </div>
-                <div class="relative lg:block">
-                    <div class="absolute -inset-10 bg-primary/20 blur-[120px] rounded-full"></div>
-                    <div
-                        class="relative rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-2xl bg-surface-dark/40 backdrop-blur-sm">
-                        <img class="w-full h-auto opacity-80" alt="Plataforma de Ventas Repleta de Leads"
-                            src="images/kanban.png" />
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Pain Points Section -->
-        <section class="py-24 bg-slate-50 dark:bg-[#0a0f1a]" id="soluciones">
-            <div class="max-w-7xl mx-auto px-6 text-center mb-16">
-                <h2 class="text-3xl lg:text-5xl font-bold mb-4" data-i18n="pain-title">Deje de perder oportunidades
-                    comerciales</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto" data-i18n="pain-sub">La ineficiencia en la gestión de
-                    pedidos le cuesta miles de
-                    dólares en ventas perdidas.</p>
-            </div>
-            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-                <div class="p-8 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
-                    <div class="w-14 h-14 bg-primary/10 text-primary rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">travel_explore</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-i18n="pain-card-1-title">Prospección Activa Automatizada</h3>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="pain-card-1-description">Extraemos de forma automática bases de datos de comercios minoristas y distribuidores locales de tu rubro, iniciando campañas de contacto personalizadas por mensajería móvil para presentar tu catálogo mayorista de manera directa.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
-                    <div class="w-14 h-14 bg-cyan-500/10 text-cyan-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">hub</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-i18n="pain-card-2-title">Red de Difusión Multicanal</h3>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="pain-card-2-description">Multiplicamos el alcance de tus contenidos. Procesamos tus videos para hacerlos únicos ante los algoritmos y los distribuimos diariamente en una red de cuentas satélites dedicadas de Reels, TikTok y Shorts.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
-                    <div class="w-14 h-14 bg-emerald-500/10 text-emerald-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">trending_up</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-i18n="pain-card-3-title">Inversión Publicitaria Inteligente</h3>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="pain-card-3-description">Monitoreamos la tracción de los videos en tiempo real. Cuando una publicación demuestra interés orgánico ganador, el sistema le activa pauta publicitaria dirigida, reduciendo el costo de captación de puntos de venta al mínimo.</p>
-                </div>
-                <div class="p-8 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-800 hover:border-primary/50 transition-all group">
-                    <div class="w-14 h-14 bg-amber-500/10 text-amber-400 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                        <span class="material-symbols-outlined text-3xl">inbox</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-i18n="pain-card-4-title">Calificación Conversacional y Cierre</h3>
-                    <p class="text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="pain-card-4-description">Los interesados son recibidos por asistentes inteligentes que los filtran según volumen de compra y zona. Si cumplen los requisitos, se les entrega tu catálogo mayorista y se derivan al equipo en una bandeja unificada.</p>
-                </div>
-            </div>
-            <div class="max-w-7xl mx-auto px-6 mt-8">
-                <div class="p-8 rounded-2xl border border-primary/50 bg-primary/5 flex flex-col md:flex-row gap-6 items-start">
-                    <span class="material-symbols-outlined text-primary text-4xl">phonelink_lock</span>
-                    <div>
-                        <h3 class="text-2xl font-bold mb-3" data-i18n="security-title">Seguridad Avanzada por Dispositivos Físicos Dedicados</h3>
-                        <p class="text-slate-500 dark:text-slate-400 leading-relaxed" data-i18n="security-description">Para marcas y fábricas que exigen gran escala, ofrecemos la opción de operar tus líneas de comunicación y perfiles de contenido directamente en una infraestructura física de dispositivos celulares reales y redes dedicadas de telefonía móvil. Esto simula interacciones humanas y conexiones nativas al 100%, eliminando riesgos de bloqueo y permitiendo un volumen de publicación masivo sin precedentes.</p>
-                    </div>
+
+                <!-- Action CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://wa.me/5491158432412?text=Hola,%20deseo%20agendar%20una%20Sesi%C3%B3n%20de%20Factibilidad%20para%20nuestra%20empresa"
+                        target="_blank"
+                        class="w-full sm:w-auto bg-gradient-to-r from-cyan-glow to-blue-500 text-black px-8 py-4 rounded-full font-bold text-base md:text-lg transition-all hover:opacity-95 glow-cyan flex items-center justify-center gap-2 cursor-pointer">
+                        <span data-i18n="cta_hero_main">Solicitar Sesión de Factibilidad & Diagnóstico</span>
+                        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+                    </a>
+                    <a href="#sectores"
+                        class="w-full sm:w-auto px-8 py-4 rounded-full font-medium text-base md:text-lg text-slate-200 hover:text-white glass hover:bg-white/10 transition-all flex items-center justify-center cursor-pointer"
+                        data-i18n="cta_hero_sec">
+                        Explorar Sectores
+                    </a>
                 </div>
             </div>
         </section>
-        <!-- Value Proposition (The Ecosystem) -->
-        <section class="py-24 overflow-hidden" id="ecosistema">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="mb-20">
-                    <span class="text-primary font-bold uppercase tracking-widest text-sm" data-i18n="eco-tag">Nuestra
-                        Metodología</span>
-                    <h2 class="text-4xl lg:text-5xl font-black mt-4" data-i18n="eco-title">El Ecosistema: Su Ventaja
-                        Competitiva</h2>
-                </div>
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Layer A -->
-                    <div class="relative p-10 rounded-3xl bg-primary/5 border border-primary/20 overflow-hidden">
-                        <div class="absolute top-0 right-0 p-8 opacity-10">
-                            <span class="material-symbols-outlined text-9xl">hub</span>
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center gap-3 mb-6">
-                                <span
-                                    class="bg-primary text-white px-3 py-1 rounded text-xs font-bold uppercase" data-i18n="layer-a-badge">Starter</span>
-                                <h3 class="text-2xl font-bold" data-i18n="layer-a-title">Capa A: Recepción Inteligente</h3>
-                            </div>
-                            <p class="text-slate-400 mb-8 text-lg" data-i18n="layer-a-description">Optimice la entrada de datos y nunca pierda un
-                                contacto inicial de ningún canal digital.</p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">chat</span>
-                                    <span data-i18n="layer-a-feature-1">Consolidación total (WA, IG, FB, Mercado Libre)</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">psychology</span>
-                                    <span data-i18n="layer-a-feature-2">Clasificación por IA de intención de compra</span>
-                                </li>
-                                <li class="flex items-center gap-3">
-                                    <span class="material-symbols-outlined text-primary">category</span>
-                                    <span data-i18n="layer-a-feature-3">Catálogos interactivos automatizados</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Layer B -->
-                    <div class="relative p-10 rounded-3xl bg-slate-900 border border-slate-800 overflow-hidden">
-                        <div class="absolute top-0 right-0 p-8 opacity-10">
-                            <span class="material-symbols-outlined text-9xl">rocket_launch</span>
-                        </div>
-                        <div class="relative z-10">
-                            <div class="flex items-center gap-3 mb-6">
-                                <span
-                                    class="bg-accent-orange text-white px-3 py-1 rounded text-xs font-bold uppercase" data-i18n="layer-b-badge">Avanzado</span>
-                                <h3 class="text-2xl font-bold" data-i18n="layer-b-title">Capa B: Prospección Activa</h3>
-                            </div>
-                            <p class="text-slate-400 mb-8 text-lg" data-i18n="layer-b-description">No espere a que el cliente lo busque. Salga a
-                                conquistar el mercado con tecnología.</p>
-                            <ul class="space-y-4">
-                                <li class="flex items-center gap-3 text-slate-200">
-                                    <span class="material-symbols-outlined text-accent-orange">radar</span>
-                                    <span data-i18n="layer-b-feature-1">Escaneo automático de mercado para nuevos prospectos</span>
-                                </li>
-                                <li class="flex items-center gap-3 text-slate-200">
-                                    <span class="material-symbols-outlined text-accent-orange">person_search</span>
-                                    <span data-i18n="layer-b-feature-2">Enriquecimiento de perfiles comerciales</span>
-                                </li>
-                                <li class="flex items-center gap-3 text-slate-200">
-                                    <span class="material-symbols-outlined text-accent-orange">rebase_edit</span>
-                                    <span data-i18n="layer-b-feature-3">Sistemas de re-engagement automatizados</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+
+        <!-- SECTION: Visual Platform Cockpit -->
+        <section class="py-12 px-4 relative bg-[#07090E]">
+            <div class="max-w-6xl mx-auto">
+                <div class="relative rounded-3xl border border-cyan-glow/20 overflow-hidden shadow-2xl bg-surface-dark/60 backdrop-blur-md p-2">
+                    <img src="images/kanban.png" alt="Plataforma de Control y Pipelines de Venta" class="w-full h-auto rounded-2xl opacity-90" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#07090E] via-transparent to-transparent pointer-events-none"></div>
                 </div>
             </div>
         </section>
-        <!-- Platform Preview -->
-        <section class="py-24 bg-background-dark" id="plataforma">
-            <div class="max-w-7xl mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl font-bold mb-6" data-i18n="plat-title">Control Total en una Interfaz Moderna
+
+        <!-- SECTION: Dual Sector Engine (B2B vs E-COMMERCE) -->
+        <section id="sectores" class="py-24 px-4 relative bg-[#090D17]">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="mono text-cyan-glow text-xs uppercase tracking-widest mb-3 font-semibold" data-i18n="sec_badge">
+                        Impacto Especializado por Modelo de Negocio
+                    </div>
+                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4" data-i18n="sec_title">
+                        Ingeniería Aplicada a su Sector
                     </h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto" data-i18n="plat-sub">Visualice su pipeline de ventas con
-                        claridad meridiana y
-                        tome decisiones basadas en datos reales.</p>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed" data-i18n="sec_subtitle">
+                        Nuestra arquitectura satelital y de prospección se adapta quirúrgicamente a la dinámica comercial de empresas mayoristas y marcas de consumo.
+                    </p>
                 </div>
-                <div class="grid lg:grid-cols-1 gap-12 items-start">
-                    <div
-                        class="rounded-2xl border border-slate-800 overflow-hidden shadow-2xl bg-surface-dark/40 backdrop-blur-sm">
-                        <img class="w-full h-auto" alt="Inbox Multicanal Activo" src="images/inbox.png" />
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Sector B2B: Fabricantes e Importadores Mayoristas -->
+                    <div class="glass-card p-8 md:p-10 rounded-3xl relative overflow-hidden border border-cyan-glow/20">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-glow/10 border border-cyan-glow/30 text-cyan-glow flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-3xl">precision_manufacturing</span>
+                        </div>
+                        <div class="mono text-xs font-bold text-cyan-glow mb-2 uppercase" data-i18n="sec_b2b_tag">B2B // INDUSTRIAL & MAYORISTA</div>
+                        <h3 class="text-2xl font-black text-white mb-4" data-i18n="sec_b2b_title">
+                            Fabricantes, Importadores y Mayoristas (B2B)
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="sec_b2b_desc">
+                            Desbloquee colocación masiva de stock y apertura perpetua de nuevos puntos de venta minoristas en todo el país sin depender de viajantes tradicionales.
+                        </p>
+                        <ul class="space-y-3 text-xs font-mono text-slate-300 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="text-cyan-glow font-bold">»</span>
+                                <span data-i18n="sec_b2b_p1">Captación automatizada de comercios minoristas y distribuidores locales.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-cyan-glow font-bold">»</span>
+                                <span data-i18n="sec_b2b_p2">Presentación de catálogos mayoristas directo al WhatsApp de dueños y compradores.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-cyan-glow font-bold">»</span>
+                                <span data-i18n="sec_b2b_p3">Blindaje de autoridad absoluta e imagen industrial frente a la competencia.</span>
+                            </li>
+                        </ul>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
+                            <span data-i18n="sec_b2b_obj">Objetivo: Apertura de Cuentas B2B</span>
+                            <span class="text-cyan-glow font-bold" data-i18n="sec_b2b_ticket">Alto Ticket</span>
+                        </div>
+                    </div>
+
+                    <!-- Sector E-Commerce B2C -->
+                    <div class="glass-card p-8 md:p-10 rounded-3xl relative overflow-hidden border border-blue-500/20">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-3xl">shopping_cart</span>
+                        </div>
+                        <div class="mono text-xs font-bold text-blue-400 mb-2 uppercase" data-i18n="sec_ecom_tag">B2C // E-COMMERCE & CONSUMO</div>
+                        <h3 class="text-2xl font-black text-white mb-4" data-i18n="sec_ecom_title">
+                            E-Commerce y Marcas de Alta Escala (B2C)
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="sec_ecom_desc">
+                            Inunde las plataformas de video corto con ángulos infinitos de producto, derribe la desconfianza del comprador y reduzca el costo de adquisición (CPA) a mínimos históricos.
+                        </p>
+                        <ul class="space-y-3 text-xs font-mono text-slate-300 mb-8">
+                            <li class="flex items-center gap-3">
+                                <span class="text-blue-400 font-bold">»</span>
+                                <span data-i18n="sec_ecom_p1">Testeo simultáneo de 15+ variaciones (UGC, unboxing, solución de dolor) sin fatiga.</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-blue-400 font-bold">»</span>
+                                <span data-i18n="sec_ecom_p2">Inyección forzada de prueba social (comentarios reales de stock, talles y envíos).</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <span class="text-blue-400 font-bold">»</span>
+                                <span data-i18n="sec_ecom_p3">Pauta directa sobre publicaciones orgánicas ganadoras (Spark Ads / Existing Post).</span>
+                            </li>
+                        </ul>
+                        <div class="pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-slate-400">
+                            <span data-i18n="sec_ecom_obj">Objetivo: Volumen & Reducción de CPA</span>
+                            <span class="text-blue-400 font-bold" data-i18n="sec_ecom_rot">Alta Rotación</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Pricing Table -->
-        <section class="py-24" id="precios">
-            <div class="max-w-7xl mx-auto px-6">
+
+        <!-- SECTION: The 4 Core Satellites Pillars (The Star Engine) -->
+        <section id="ecosistema" class="py-28 px-4 relative bg-[#07090E]">
+            <div class="max-w-7xl mx-auto mb-16">
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                    <div>
+                        <div class="mono text-cyan-glow text-xs uppercase tracking-widest mb-2 font-semibold" data-i18n="sat_badge">
+                            Motor Propietario de Distribución
+                        </div>
+                        <h2 class="heading-font text-3xl md:text-5xl font-extrabold tracking-tight text-white" data-i18n="sat_title">
+                            Ecosistema de Satélites & Aceleración
+                        </h2>
+                    </div>
+                    <p class="text-slate-400 text-sm max-w-md" data-i18n="sat_subtitle">
+                        Cuatro capas coordinadas para producir creativos infinitos, burlar la fatiga publicitaria y forzar la viralidad orgánica.
+                    </p>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- 01 Fábrica de Creativos Anti-Hash -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-cyan-glow">
+                    <div>
+                        <div class="mono text-xs text-cyan-glow font-bold mb-3" data-i18n="sat_p1_badge">01 // FÁBRICA DE CONTENIDO</div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="sat_p1_title">Fábrica de Creativos Anti-Hash</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed" data-i18n="sat_p1_desc">
+                            Producción de variaciones únicas con ganchos distintos para inundar Reels, TikTok y YouTube Shorts sin ser marcados como duplicados por los algoritmos.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-white/5 mono text-[10px] text-cyan-glow/80 uppercase" data-i18n="sat_p1_tag">
+                        Generación Anti-Hash de Video
+                    </div>
+                </div>
+
+                <!-- 02 Red de Satélites Replicadores -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-blue-500">
+                    <div>
+                        <div class="mono text-xs text-blue-400 font-bold mb-3" data-i18n="sat_p2_badge">02 // RED DE DISTRIBUCIÓN</div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="sat_p2_title">Red de Satélites Replicadores</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed" data-i18n="sat_p2_desc">
+                            Cuentas embajadoras que distribuyen el contenido en nichos geográficos aislados bajo perfiles limpios y proxies residenciales dedicados.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-white/5 mono text-[10px] text-blue-400/80 uppercase" data-i18n="sat_p2_tag">
+                        Replicadores Satélite Aislados
+                    </div>
+                </div>
+
+                <!-- 03 Validación Algorítmica -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-indigo-500">
+                    <div>
+                        <div class="mono text-xs text-indigo-400 font-bold mb-3" data-i18n="sat_p3_badge">03 // VALIDACIÓN & IMPULSO</div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="sat_p3_title">Validación Algorítmica</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed" data-i18n="sat_p3_desc">
+                            Inyección temprana de retención obligatoria (watch time loops) y comentarios reales de prueba social para activar la recomendación orgánica.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-white/5 mono text-[10px] text-indigo-400/80 uppercase" data-i18n="sat_p3_tag">
+                        Boost Autónomo & Watch Time
+                    </div>
+                </div>
+
+                <!-- 04 Inversión Publicitaria sobre Ganador Orgánico -->
+                <div class="glass-card p-6 rounded-2xl flex flex-col justify-between border-t-2 border-t-emerald-400">
+                    <div>
+                        <div class="mono text-xs text-emerald-400 font-bold mb-3" data-i18n="sat_p4_badge">04 // ESCALA PUBLICITARIA</div>
+                        <h3 class="text-xl font-bold text-white mb-2" data-i18n="sat_p4_title">Pauta sobre Ganador Orgánico</h3>
+                        <p class="text-slate-400 text-xs leading-relaxed" data-i18n="sat_p4_desc">
+                            Detectar qué video explotó y transformarlo en anuncio pago manteniendo toda la prueba social y comentarios acumulados (Partnership Ads).
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-white/5 mono text-[10px] text-emerald-400/80 uppercase" data-i18n="sat_p4_tag">
+                        Pauta sobre Video Ganador
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Complete Engineering Pillars & Infrastructure -->
+        <section id="pilares" class="py-24 px-4 relative bg-[#090D17]">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <div class="mono text-cyan-glow text-xs uppercase tracking-widest mb-3 font-semibold" data-i18n="eng_badge">
+                        Infraestructura Robusta
+                    </div>
+                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold tracking-tight text-white mb-4" data-i18n="eng_title">
+                        Prospección, CRM & Seguridad Física
+                    </h2>
+                    <p class="text-slate-400 text-sm md:text-base leading-relaxed" data-i18n="eng_subtitle">
+                        El ecosistema no termina en las redes sociales: capturamos la intención y la canalizamos hacia transacciones comerciales reales.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Prospección Activa Automatizada B2B -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-12 h-12 rounded-2xl bg-cyan-glow/10 text-cyan-glow flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-3xl">travel_explore</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="eng_p1_title">Prospección Activa B2B</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="eng_p1_desc">
+                            Extracción automática y continua de bases de datos de comercios minoristas y distribuidores de su rubro, iniciando campañas directas hacia WhatsApp con catálogos mayoristas interactivos.
+                        </p>
+                    </div>
+
+                    <!-- Calificación Conversacional y CRM Inbox -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-400 flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-3xl">forum</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="eng_p2_title">Calificación & CRM Multiagente</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="eng_p2_desc">
+                            Centralización absoluta de consultas (WhatsApp, Instagram, Facebook, Mercado Libre). Asistentes inteligentes filtran volumen de compra y zona, derivando al prospecto listo a su equipo.
+                        </p>
+                    </div>
+
+                    <!-- Seguridad por Dispositivos Físicos Celulares -->
+                    <div class="glass-card p-8 rounded-3xl">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-6">
+                            <span class="material-symbols-outlined text-3xl">phonelink_lock</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3" data-i18n="eng_p3_title">Hardware Dedicado & Seguridad</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed" data-i18n="eng_p3_desc">
+                            Para marcas que exigen gran escala, operamos líneas y perfiles en dispositivos celulares físicos reales y redes móviles dedicadas. Simulación humana al 100% para volumen sin bloqueos.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Inbox Preview Image -->
+                <div class="mt-12 rounded-3xl border border-white/5 overflow-hidden shadow-2xl bg-surface-dark/40 backdrop-blur-sm p-2">
+                    <img src="images/inbox.png" alt="Inbox Multicanal y Gestión de Leads" class="w-full h-auto rounded-2xl opacity-90" />
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Interactive Capacity Simulator -->
+        <section id="simulador" class="py-24 px-4 relative bg-[#07090E]">
+            <div class="max-w-4xl mx-auto glass p-8 md:p-12 rounded-3xl border border-cyan-glow/20 glow-cyan">
+                <div class="text-center mb-10">
+                    <div class="mono text-cyan-glow text-xs uppercase tracking-widest mb-2 font-bold" data-i18n="sim_badge">
+                        Simulador de Proyección de Demanda
+                    </div>
+                    <h2 class="heading-font text-2xl md:text-4xl font-extrabold text-white mb-3" data-i18n="sim_title">
+                        Proyecte la Escala Comercial de su Empresa
+                    </h2>
+                    <p class="text-slate-400 text-xs md:text-sm" data-i18n="sim_subtitle">
+                        Ajuste su objetivo mensual de nuevos comercios minoristas o clientes mayoristas para estimar la infraestructura requerida.
+                    </p>
+                </div>
+
+                <!-- Slider Control -->
+                <div class="mb-10 space-y-4">
+                    <div class="flex justify-between items-center text-sm font-mono">
+                        <span class="text-slate-400" data-i18n="sim_label">Objetivo Mensual de Puntos de Venta / Clientes:</span>
+                        <span id="capacity-display" class="text-cyan-glow text-xl font-black">50 Clientes / Comercios</span>
+                    </div>
+                    <input type="range" id="capacity-slider" min="10" max="500" step="10" value="50" class="w-full" oninput="updateSimulator(this.value)">
+                    <div class="flex justify-between text-[11px] font-mono text-slate-500">
+                        <span data-i18n="sim_step_1">10 (Nivel Inicial)</span>
+                        <span data-i18n="sim_step_2">50 (Escala Regional)</span>
+                        <span data-i18n="sim_step_3">200 (Expansión Nacional)</span>
+                        <span data-i18n="sim_step_4">500+ (Dominación de Mercado)</span>
+                    </div>
+                </div>
+
+                <!-- Output Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
+                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out1_title">Impacto de Alcance Satelital</div>
+                        <div id="reach-display" class="text-xl md:text-2xl font-black text-white">65.000 - 140.000</div>
+                        <div class="text-[10px] text-cyan-glow/80 mt-1" data-i18n="sim_out1_sub">Vistas orgánicas calificadas</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
+                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out2_title">Contactos / Comercios Escaneados</div>
+                        <div id="signals-display" class="text-xl md:text-2xl font-black text-white">1.500+</div>
+                        <div class="text-[10px] text-cyan-glow/80 mt-1" data-i18n="sim_out2_sub">Prospectos mapeados</div>
+                    </div>
+                    <div class="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
+                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out3_title">Ciclo Estimado de Cierre</div>
+                        <div id="window-display" class="text-xl md:text-2xl font-black text-emerald-400">10 a 20 días</div>
+                        <div class="text-[10px] text-slate-500 mt-1" data-i18n="sim_out3_sub">Velocidad de incorporación</div>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <a href="https://wa.me/5491158432412?text=Hola,%20hice%20una%20simulaci%C3%B3n%20para%20mi%20empresa%20y%20quiero%20conocer%20la%20factibilidad%20t%C3%A9cnica"
+                        target="_blank"
+                        class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-glow to-blue-500 text-black px-8 py-3.5 rounded-full font-bold text-sm hover:opacity-95 transition-all glow-cyan cursor-pointer">
+                        <span data-i18n="sim_cta">Validar Factibilidad de mi Proyecto</span>
+                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: Work Modalities (No fixed prices - High Ticket Consultation) -->
+        <section id="modalidades" class="py-28 relative overflow-hidden bg-[#090D17]">
+            <div class="max-w-6xl mx-auto px-4 relative z-10">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl lg:text-5xl font-black mb-6" data-i18n="price-title">Planes Llave en Mano</h2>
-                    <div class="inline-block px-4 py-2 bg-accent-orange/10 border border-accent-orange/30 text-accent-orange rounded-full font-bold text-sm animate-pulse"
-                        data-i18n="price-tag">
-                        SISTEMAS LISTOS PARA USAR - CONEXIÓN API INCLUIDA
+                    <div class="mono text-cyan-glow text-xs uppercase tracking-widest mb-2 font-bold" data-i18n="mod_badge">
+                        Modelos de Implementación
                     </div>
+                    <h2 class="heading-font text-3xl md:text-5xl font-extrabold text-white mb-4" data-i18n="mod_title">
+                        Modalidades de Trabajo
+                    </h2>
+                    <p class="text-slate-400 max-w-xl mx-auto text-sm" data-i18n="mod_subtitle">
+                        Adaptamos nuestra infraestructura tecnológica a la estructura operativa y escala de su empresa.
+                    </p>
                 </div>
-                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                    <!-- Starter Plan -->
-                    <div
-                        class="p-10 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-surface-dark transition-all hover:scale-[1.02]">
-                        <div class="mb-8">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="starter-plan-title">Plan STARTER</h3>
-                            <p class="text-slate-500 text-sm" data-i18n="starter-plan-subtitle">Turnkey: Listo para vender</p>
-                        </div>
-                        <div class="mb-8">
-                            <div class="text-slate-400 text-sm mb-1" data-i18n="starter-setup">Setup: $249 USD</div>
-                            <div class="text-4xl font-black">$199 <span class="text-lg text-slate-500 font-normal" data-i18n="starter-period">/
-                                    mes</span></div>
-                        </div>
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                <b data-i18n="starter-feature-1">Contactos ILIMITADOS</b>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Modality 1: Integrated -->
+                    <div class="glass p-8 md:p-10 rounded-3xl border border-white/5 relative overflow-hidden group hover:border-cyan-glow/30 transition-all">
+                        <div class="mono text-xs text-slate-500 mb-4 font-bold" data-i18n="mod_1_tag">MODALIDAD 01 // INTEGRADA</div>
+                        <h3 class="text-2xl font-black text-white mb-4">
+                            <span data-i18n="mod_1_prefix">Infraestructura</span> <span class="text-cyan-glow" data-i18n="mod_1_highlight">Para su Equipo Comercial</span>
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="mod_1_desc">
+                            Desplegamos la red de satélites, la fábrica de creativos y el motor de prospección. Enviamos todo el flujo de prospectos calificados directamente a su equipo de ventas en WhatsApp/CRM para que ellos gestionen el cierre de pedidos.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-xs font-mono text-slate-400">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-cyan-glow"></span>
+                                <span data-i18n="mod_1_point_1">Integración directa con su CRM / WhatsApp comercial</span>
                             </li>
-                            <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                <span data-i18n="starter-feature-2">Inbox (WhatsApp, IG, FB, ML)</span>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-cyan-glow"></span>
+                                <span data-i18n="mod_1_point_2">Control total del cierre y facturación por su equipo</span>
                             </li>
-                            <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                <span data-i18n="starter-feature-3">Automatización y Conexión API</span>
-                            </li>
-                            <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                <span data-i18n="starter-feature-4">Soporte e Instalación Llave en Mano</span>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-cyan-glow"></span>
+                                <span data-i18n="mod_1_point_3">Optimización continua de señales y red de satélites</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5491158432412?text=Hola%2C%20quisiera%20comenzar%20con%20el%20Plan%20Starter%0A"
+                        <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20evaluar%20la%20Modalidad%20Integrada%20para%20nuestro%20equipo"
                             target="_blank"
-                            class="inline-block w-full text-center py-4 border border-primary text-primary hover:bg-primary hover:text-white font-bold rounded-xl transition-all"
-                            data-i18n="plan-starter-cta">
-                            Comenzar ahora
+                            class="inline-block w-full text-center py-3.5 border border-cyan-glow/50 text-cyan-glow hover:bg-cyan-glow hover:text-black font-bold text-xs rounded-xl transition-all cursor-pointer"
+                            data-i18n="mod_1_cta">
+                            Consultar Factibilidad Integrada
                         </a>
                     </div>
-                    <!-- Advanced Plan -->
-                    <div
-                        class="p-10 rounded-3xl border-2 border-primary bg-primary/5 relative transition-all hover:scale-[1.02]">
-                        <div
-                            class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-white text-[10px] font-bold uppercase rounded-full tracking-widest" data-i18n="advanced-badge">
-                            MÁS ELEGIDO
+
+                    <!-- Modality 2: Turnkey -->
+                    <div class="glass p-8 md:p-10 rounded-3xl border border-cyan-glow/30 relative overflow-hidden group shadow-lg shadow-cyan-glow/10">
+                        <div class="inline-block px-3 py-1 rounded-full bg-cyan-glow/10 border border-cyan-glow/30 mono text-[10px] text-cyan-glow font-bold mb-4" data-i18n="mod_2_tag">
+                            MÁS ELEGIDO // MÁXIMA EFICIENCIA
                         </div>
-                        <div class="mb-8">
-                            <h3 class="text-2xl font-bold mb-2" data-i18n="advanced-plan-title">Plan AVANZADO</h3>
-                            <p class="text-primary text-sm font-semibold" data-i18n="advanced-plan-subtitle">Crecimiento Continuo</p>
-                        </div>
-                        <div class="mb-8">
-                            <div class="text-slate-400 text-sm mb-1" data-i18n="advanced-setup">Setup: $999 USD</div>
-                            <div class="text-4xl font-black">$997 <span class="text-lg text-slate-500 font-normal" data-i18n="advanced-period">/
-                                    mes</span></div>
-                        </div>
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                <b data-i18n="advanced-feature-1">Todo en Starter</b>
+                        <h3 class="text-2xl font-black text-white mb-4">
+                            <span data-i18n="mod_2_prefix">Operación</span> <span class="text-cyan-glow" data-i18n="mod_2_highlight">Llave en Mano (Turnkey)</span>
+                        </h3>
+                        <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="mod_2_desc">
+                            Servicio integral delegado. Nosotros producimos las variaciones de video, operamos la red de satélites, pautamos el ganador y atendemos la demanda con asistentes inteligentes, entregándole a su empresa las cuentas y pedidos confirmados.
+                        </p>
+                        <ul class="space-y-3 mb-8 text-xs font-mono text-slate-400">
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-cyan-glow"></span>
+                                <span data-i18n="mod_2_point_1">Gestión 100% autónoma de creativos, satélites y pauta</span>
                             </li>
-                            <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                <span data-i18n="advanced-feature-2">Prospección Activa Perpetua</span>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-cyan-glow"></span>
+                                <span data-i18n="mod_2_point_2">Entrega de compras mayoristas y clientes listos</span>
                             </li>
-                            <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                <span data-i18n="advanced-feature-3">IA de Clasificación Avanzada</span>
-                            </li>
-                            <li class="flex items-center gap-3 text-sm">
-                                <span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-                                <span data-i18n="advanced-feature-4">Entrenamiento de IA Personalizado</span>
+                            <li class="flex items-center gap-3">
+                                <span class="w-1.5 h-1.5 rounded-full bg-cyan-glow"></span>
+                                <span data-i18n="mod_2_point_3">Acompañamiento estratégico y escala mensual garantizada</span>
                             </li>
                         </ul>
-                        <a href="https://wa.me/5491158432412?text=Hola%2C%20quisiera%20comenzar%20con%20el%20Plan%20Avanzado%0A"
+                        <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20solicitar%20la%20Operaci%C3%B3n%20Llave%20en%20Mano%20(Turnkey)"
                             target="_blank"
-                            class="inline-block w-full text-center py-4 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/30 hover:scale-[1.02] transition-all"
-                            data-i18n="plan-adv-cta">
-                            Quiero Escalar mi Negocio
+                            class="inline-block w-full text-center py-3.5 bg-gradient-to-r from-cyan-glow to-blue-500 text-black font-bold text-xs rounded-xl shadow-lg shadow-cyan-glow/20 hover:opacity-95 transition-all cursor-pointer"
+                            data-i18n="mod_2_cta">
+                            Solicitar Operación Llave en Mano
                         </a>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Final CTA -->
-        <section class="py-24 bg-primary">
-            <div class="max-w-4xl mx-auto px-6 text-center text-white">
-                <h2 class="text-4xl lg:text-6xl font-black mb-8" data-i18n="final-title">¿Listo para encender su motor
-                    de ventas?</h2>
-                <p class="text-xl text-white/80 mb-12" data-i18n="final-sub">No deje que la competencia se lleve los
-                    clientes que su negocio
-                    merece.</p>
-                <a href="https://wa.me/5491158432412?text=Hola%2C%20quisiera%20agendar%20mi%20auditor%C3%ADa%20gratuita%0A"
-                    target="_blank"
-                    class="inline-block px-10 py-5 bg-white text-primary font-black rounded-xl text-xl hover:shadow-2xl transition-all"
-                    data-i18n="final-cta">
-                    Agendar mi Auditoría Gratuita
-                </a>
+
+                <!-- Final Large CTA -->
+                <div class="mt-16 text-center">
+                    <a href="https://wa.me/5491158432412?text=Hola,%20deseo%20solicitar%20una%20Sesi%C3%B3n%20de%20Factibilidad%20y%20Diagn%C3%B3stico%20para%20nuestra%20empresa"
+                        target="_blank"
+                        class="inline-flex items-center gap-3 bg-gradient-to-r from-cyan-glow to-blue-500 text-black px-10 py-5 rounded-full font-extrabold text-lg md:text-xl hover:scale-105 transition-all glow-cyan cursor-pointer">
+                        <span data-i18n="cta_final">Solicitar Sesión de Factibilidad & Diagnóstico</span>
+                        <span class="material-symbols-outlined text-2xl">arrow_forward</span>
+                    </a>
+                    <p class="text-xs font-mono text-slate-500 mt-4" data-i18n="cta_subnote">
+                        Capacidad de implementación limitada por rubro geográfico para garantizar exclusividad competitiva.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
-    <footer class="py-12 border-t border-slate-200 dark:border-slate-800">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+
+    <!-- Footer -->
+    <footer class="py-16 px-4 border-t border-white/5 bg-[#07090E] relative">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-3">
-                <div class="bg-primary p-1.5 rounded-lg">
-                    <span class="material-symbols-outlined text-white text-xl">factory</span>
+                <div class="w-8 h-8 rounded-xl bg-gradient-to-tr from-cyan-glow to-blue-600 p-0.5">
+                    <div class="w-full h-full bg-[#07090E] rounded-[10px] flex items-center justify-center">
+                        <span class="text-cyan-glow font-mono font-bold text-xs">STI</span>
+                    </div>
                 </div>
-                <h2 class="text-lg font-bold tracking-tight">STI ESTUDIO</h2>
+                <div class="heading-font text-2xl font-black tracking-tight text-white">
+                    STI <span class="text-cyan-glow">ESTUDIO</span>
+                </div>
             </div>
-            <p class="text-slate-500 text-sm" data-i18n="footer-copy">© 2026 STI ESTUDIO. Todos los derechos
-                reservados.</p>
-            <div class="flex gap-6">
-                <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="terminos.html"
-                    data-i18n="footer-terms">Términos</a>
-                <a class="text-slate-400 hover:text-primary transition-colors text-sm" href="privacidad.html"
-                    data-i18n="footer-priv">Privacidad</a>
+
+            <div class="flex flex-wrap justify-center gap-6 md:gap-10 text-slate-400 text-xs uppercase tracking-widest mono">
+                <a href="privacidad.html" class="hover:text-cyan-glow transition" data-i18n="footer_privacy">Privacidad</a>
+                <a href="terminos.html" class="hover:text-cyan-glow transition" data-i18n="footer_terms">Términos</a>
+            </div>
+
+            <div class="text-slate-600 text-xs mono">
+                &copy; 2026 STI ESTUDIO • Advanced Demand Infrastructure
             </div>
         </div>
     </footer>
+
+    <!-- Translations & Simulator Script -->
     <script>
+        let currentLang = 'es';
+
+        // Simulator Logic
+        function updateSimulator(val) {
+            const capacity = parseInt(val);
+            const slotWord = currentLang === 'pt' ? 'Clientes / Lojas' : (currentLang === 'en' ? 'Clients / Stores' : 'Clientes / Comercios');
+            document.getElementById('capacity-display').innerText = capacity.toLocaleString() + ' ' + slotWord;
+
+            const reachMin = Math.round(capacity * 1200).toLocaleString();
+            const reachMax = Math.round(capacity * 2800).toLocaleString();
+            document.getElementById('reach-display').innerText = `${reachMin} - ${reachMax}`;
+
+            const signals = Math.round(capacity * 30).toLocaleString() + '+';
+            document.getElementById('signals-display').innerText = signals;
+
+            let windowDays = "10 a 20 días";
+            if (capacity > 300) {
+                windowDays = currentLang === 'en' ? "30 to 45 days" : (currentLang === 'pt' ? "30 a 45 dias" : "30 a 45 días");
+            } else if (capacity > 100) {
+                windowDays = currentLang === 'en' ? "20 to 30 days" : (currentLang === 'pt' ? "20 a 30 dias" : "20 a 30 días");
+            } else {
+                windowDays = currentLang === 'en' ? "10 to 20 days" : (currentLang === 'pt' ? "10 a 20 dias" : "10 a 20 días");
+            }
+            document.getElementById('window-display').innerText = windowDays;
+        }
+
         const translations = {
             es: {
-                "nav-sol": "Soluciones",
-                "nav-eco": "Ecosistema",
-                "nav-plat": "Plataforma",
-                "nav-price": "Precios",
-                "nav-cta": "Solicitar Auditoría",
-                "hero-title": "Convierta su Empresa en una <span class='text-primary'>Máquina de Ventas</span> 24/7",
-                "hero-sub": "Automatice sus Ventas, Prospección y Atención al Cliente desde un solo lugar. Conecte WhatsApp, IG, FB, Mercado Libre y todos sus canales digitales en un ecosistema llave en mano.",
-                "hero-cta-main": "Solicitar Auditoría de Mercado",
-                "hero-cta-sec": "Ver Planes",
-                "pain-title": "Deje de perder oportunidades comerciales",
-                "pain-sub": "La ineficiencia en la gestión de pedidos le cuesta miles de dólares en ventas perdidas.",
-                "pain-card-1-title": "Prospección Activa Automatizada", "pain-card-1-description": "Extraemos de forma automática bases de datos de comercios minoristas y distribuidores locales de tu rubro, iniciando campañas de contacto personalizadas por mensajería móvil para presentar tu catálogo mayorista de manera directa.",
-                "pain-card-2-title": "Red de Difusión Multicanal", "pain-card-2-description": "Multiplicamos el alcance de tus contenidos. Procesamos tus videos para hacerlos únicos ante los algoritmos y los distribuimos diariamente en una red de cuentas satélites dedicadas de Reels, TikTok y Shorts.",
-                "pain-card-3-title": "Inversión Publicitaria Inteligente", "pain-card-3-description": "Monitoreamos la tracción de los videos en tiempo real. Cuando una publicación demuestra interés orgánico ganador, el sistema le activa pauta publicitaria dirigida, reduciendo el costo de captación de puntos de venta al mínimo.",
-                "pain-card-4-title": "Calificación Conversacional y Cierre", "pain-card-4-description": "Los interesados son recibidos por asistentes inteligentes que los filtran según volumen de compra y zona. Si cumplen los requisitos, se les entrega tu catálogo mayorista y se derivan al equipo en una bandeja unificada.",
-                "security-title": "Seguridad Avanzada por Dispositivos Físicos Dedicados", "security-description": "Para marcas y fábricas que exigen gran escala, ofrecemos la opción de operar tus líneas de comunicación y perfiles de contenido directamente en una infraestructura física de dispositivos celulares reales y redes dedicadas de telefonía móvil. Esto simula interacciones humanas y conexiones nativas al 100%, eliminando riesgos de bloqueo y permitiendo un volumen de publicación masivo sin precedentes.",
-                "eco-tag": "Nuestra Metodología",
-                "eco-title": "El Ecosistema: Su Ventaja Competitiva",
-                "layer-a-badge": "Starter",
-                "layer-a-title": "Capa A: Recepción Inteligente",
-                "layer-a-description": "Optimice la entrada de datos y nunca pierda un contacto inicial de ningún canal digital.",
-                "layer-a-feature-1": "Consolidación total (WA, IG, FB, Mercado Libre)",
-                "layer-a-feature-2": "Clasificación por IA de intención de compra",
-                "layer-a-feature-3": "Catálogos interactivos automatizados",
-                "layer-b-badge": "Avanzado",
-                "layer-b-title": "Capa B: Prospección Activa",
-                "layer-b-description": "No espere a que el cliente lo busque. Salga a conquistar el mercado con tecnología.",
-                "layer-b-feature-1": "Escaneo automático de mercado para nuevos prospectos",
-                "layer-b-feature-2": "Enriquecimiento de perfiles comerciales",
-                "layer-b-feature-3": "Sistemas de re-engagement automatizados",
-                "plat-title": "Control Total en una Interfaz Moderna",
-                "plat-sub": "Visualice su pipeline de ventas con claridad meridiana y tome decisiones basadas en datos reales.",
-                "price-title": "Planes Llave en Mano",
-                "price-tag": "SISTEMAS LISTOS PARA USAR - CONEXIÓN API INCLUIDA",
-                "starter-plan-title": "Plan STARTER", "starter-plan-subtitle": "Turnkey: Listo para vender", "starter-setup": "Setup: $249 USD", "starter-period": "/ mes", "starter-feature-1": "Contactos ILIMITADOS", "starter-feature-2": "Inbox (WhatsApp, IG, FB, ML)", "starter-feature-3": "Automatización y Conexión API", "starter-feature-4": "Soporte e Instalación Llave en Mano", "advanced-badge": "MÁS ELEGIDO", "advanced-plan-title": "Plan AVANZADO", "advanced-plan-subtitle": "Crecimiento Continuo", "advanced-setup": "Setup: $999 USD", "advanced-period": "/ mes", "advanced-feature-1": "Todo en Starter", "advanced-feature-2": "Prospección Activa Perpetua", "advanced-feature-3": "IA de Clasificación Avanzada", "advanced-feature-4": "Entrenamiento de IA Personalizado",
-                "plan-starter-cta": "Comenzar ahora",
-                "plan-adv-cta": "Quiero Escalar mi Negocio",
-                "final-cta": "Agendar mi Auditoría Gratuita",
-                "final-title": "¿Listo para encender su motor de ventas?",
-                "final-sub": "No deje que la competencia se lleve los clientes que su negocio merece.",
-                "footer-copy": "© 2026 STI ESTUDIO. Todos los derechos reservados.",
-                "footer-terms": "Términos",
-                "footer-priv": "Privacidad"
+                nav_sub: "Posicionamiento & Prospección",
+                nav_ecosystem: "Ecosistema Satélites",
+                nav_sectors: "B2B & E-Commerce",
+                nav_pillars: "Pilares de Ingeniería",
+                nav_simulator: "Simulador",
+                nav_modalities: "Modalidades",
+                nav_cta: "Solicitar Diagnóstico",
+                hero_badge: "Infraestructura de Visibilidad & Prospección Activa",
+                hero_title_p1: "POSICIONAMIENTO DE MARCA",
+                hero_title_p2: "& PROSPECCIÓN PERPETUA",
+                hero_sub_start: "Infraestructura tecnológica integral para",
+                hero_sub_highlight: "Fabricantes, Importadores, Mayoristas (B2B)",
+                hero_sub_middle: "y",
+                hero_sub_ecom: "E-Commerce de Alta Escala (B2C)",
+                hero_sub_end: ". Multiplicamos la visibilidad de su marca, activamos distribución algorítmica con satélites y ejecutamos prospección perpetua llave en mano.",
+                pill_1: "Fábrica de Creativos Anti-Hash",
+                pill_2: "Red de Satélites Replicadores & Boost",
+                pill_3: "Prospección Mayorista & CRM Multiagente",
+                cta_hero_main: "Solicitar Sesión de Factibilidad & Diagnóstico",
+                cta_hero_sec: "Explorar Sectores & Ecosistema",
+                sec_badge: "Impacto Especializado por Modelo de Negocio",
+                sec_title: "Ingeniería Aplicada a su Sector",
+                sec_subtitle: "Nuestra arquitectura satelital y de prospección se adapta quirúrgicamente a la dinámica comercial de empresas mayoristas y marcas de consumo.",
+                sec_b2b_tag: "B2B // INDUSTRIAL & MAYORISTA",
+                sec_b2b_title: "Fabricantes, Importadores y Mayoristas (B2B)",
+                sec_b2b_desc: "Desbloquee colocación masiva de stock y apertura perpetua de nuevos puntos de venta minoristas en todo el país sin depender de viajantes tradicionales.",
+                sec_b2b_p1: "Captación automatizada de comercios minoristas y distribuidores locales.",
+                sec_b2b_p2: "Presentación de catálogos mayoristas directo al WhatsApp de dueños y compradores.",
+                sec_b2b_p3: "Blindaje de autoridad absoluta e imagen industrial frente a la competencia.",
+                sec_b2b_obj: "Objetivo: Apertura de Cuentas B2B",
+                sec_b2b_ticket: "Alto Ticket",
+                sec_ecom_tag: "B2C // E-COMMERCE & CONSUMO",
+                sec_ecom_title: "E-Commerce y Marcas de Alta Escala (B2C)",
+                sec_ecom_desc: "Inunde las plataformas de video corto con ángulos infinitos de producto, derribe la desconfianza del comprador y reduzca el costo de adquisición (CPA) a mínimos históricos.",
+                sec_ecom_p1: "Testeo simultáneo de 15+ variaciones (UGC, unboxing, solución de dolor) sin fatiga.",
+                sec_ecom_p2: "Inyección forzada de prueba social (comentarios reales de stock, talles y envíos).",
+                sec_ecom_p3: "Pauta directa sobre publicaciones orgánicas ganadoras (Spark Ads / Existing Post).",
+                sec_ecom_obj: "Objetivo: Volumen & Reducción de CPA",
+                sec_ecom_rot: "Alta Rotación",
+                sat_badge: "Motor Propietario de Distribución",
+                sat_title: "Ecosistema de Satélites & Aceleración",
+                sat_subtitle: "Cuatro capas coordinadas para producir creativos infinitos, burlar la fatiga publicitaria y forzar la viralidad orgánica.",
+                sat_p1_badge: "01 // FÁBRICA DE CONTENIDO",
+                sat_p1_title: "Fábrica de Creativos Anti-Hash",
+                sat_p1_desc: "Producción de variaciones únicas con ganchos distintos para inundar Reels, TikTok y YouTube Shorts sin ser marcados como duplicados por los algoritmos.",
+                sat_p1_tag: "Generación Anti-Hash de Video",
+                sat_p2_badge: "02 // RED DE DISTRIBUCIÓN",
+                sat_p2_title: "Red de Satélites Replicadores",
+                sat_p2_desc: "Cuentas embajadoras que distribuyen el contenido en nichos geográficos aislados bajo perfiles limpios y proxies residenciales dedicados.",
+                sat_p2_tag: "Replicadores Satélite Aislados",
+                sat_p3_badge: "03 // VALIDACIÓN & IMPULSO",
+                sat_p3_title: "Validación Algorítmica",
+                sat_p3_desc: "Inyección temprana de retención obligatoria (watch time loops) y comentarios reales de prueba social para activar la recomendación orgánica.",
+                sat_p3_tag: "Boost Autónomo & Watch Time",
+                sat_p4_badge: "04 // ESCALA PUBLICITARIA",
+                sat_p4_title: "Pauta sobre Ganador Orgánico",
+                sat_p4_desc: "Detectar qué video explotó y transformarlo en anuncio pago manteniendo toda la prueba social y comentarios acumulados (Partnership Ads).",
+                sat_p4_tag: "Pauta sobre Video Ganador",
+                eng_badge: "Infraestructura Robusta",
+                eng_title: "Prospección, CRM & Seguridad Física",
+                eng_subtitle: "El ecosistema no termina en las redes sociales: capturamos la intención y la canalizamos hacia transacciones comerciales reales.",
+                eng_p1_title: "Prospección Activa B2B",
+                eng_p1_desc: "Extracción automática y continua de bases de datos de comercios minoristas y distribuidores de su rubro, iniciando campañas directas hacia WhatsApp con catálogos mayoristas interactivos.",
+                eng_p2_title: "Calificación & CRM Multiagente",
+                eng_p2_desc: "Centralización absoluta de consultas (WhatsApp, Instagram, Facebook, Mercado Libre). Asistentes inteligentes filtran volumen de compra y zona, derivando al prospecto listo a su equipo.",
+                eng_p3_title: "Hardware Dedicado & Seguridad",
+                eng_p3_desc: "Para marcas que exigen gran escala, operamos líneas y perfiles en dispositivos celulares físicos reales y redes móviles dedicadas. Simulación humana al 100% para volumen sin bloqueos.",
+                sim_badge: "Simulador de Proyección de Demanda",
+                sim_title: "Proyecte la Escala Comercial de su Empresa",
+                sim_subtitle: "Ajuste su objetivo mensual de nuevos comercios minoristas o clientes mayoristas para estimar la infraestructura requerida.",
+                sim_label: "Objetivo Mensual de Puntos de Venta / Clientes:",
+                sim_step_1: "10 (Nivel Inicial)",
+                sim_step_2: "50 (Escala Regional)",
+                sim_step_3: "200 (Expansión Nacional)",
+                sim_step_4: "500+ (Dominación de Mercado)",
+                sim_out1_title: "Impacto de Alcance Satelital",
+                sim_out1_sub: "Vistas orgánicas calificadas",
+                sim_out2_title: "Contactos / Comercios Escaneados",
+                sim_out2_sub: "Prospectos mapeados",
+                sim_out3_title: "Ciclo Estimado de Cierre",
+                sim_out3_sub: "Velocidad de incorporación",
+                sim_cta: "Validar Factibilidad de mi Proyecto",
+                mod_badge: "Modelos de Implementación",
+                mod_title: "Modalidades de Trabajo",
+                mod_subtitle: "Adaptamos nuestra infraestructura tecnológica a la estructura operativa y escala de su empresa.",
+                mod_1_tag: "MODALIDAD 01 // INTEGRADA",
+                mod_1_prefix: "Infraestructura",
+                mod_1_highlight: "Para su Equipo Comercial",
+                mod_1_desc: "Desplegamos la red de satélites, la fábrica de creativos y el motor de prospección. Enviamos todo el flujo de prospectos calificados directamente a su equipo de ventas en WhatsApp/CRM para que ellos gestionen el cierre de pedidos.",
+                mod_1_point_1: "Integración directa con su CRM / WhatsApp comercial",
+                mod_1_point_2: "Control total del cierre y facturación por su equipo",
+                mod_1_point_3: "Optimización continua de señales y red de satélites",
+                mod_1_cta: "Consultar Factibilidad Integrada",
+                mod_2_tag: "MÁS ELEGIDO // MÁXIMA EFICIENCIA",
+                mod_2_prefix: "Operación",
+                mod_2_highlight: "Llave en Mano (Turnkey)",
+                mod_2_desc: "Servicio integral delegado. Nosotros producimos las variaciones de video, operamos la red de satélites, pautamos el ganador y atendemos la demanda con asistentes inteligentes, entregándole a su empresa las cuentas y pedidos confirmados.",
+                mod_2_point_1: "Gestión 100% autónoma de creativos, satélites y pauta",
+                mod_2_point_2: "Entrega de compras mayoristas y clientes listos",
+                mod_2_point_3: "Acompañamiento estratégico y escala mensual garantizada",
+                mod_2_cta: "Solicitar Operación Llave en Mano",
+                cta_final: "Solicitar Sesión de Factibilidad & Diagnóstico",
+                cta_subnote: "Capacidad de implementación limitada por rubro geográfico para garantizar exclusividad competitiva.",
+                footer_privacy: "Privacidad",
+                footer_terms: "Términos"
             },
             pt: {
-                "nav-sol": "Soluções",
-                "nav-eco": "Ecossistema",
-                "nav-plat": "Plataforma",
-                "nav-price": "Preços",
-                "nav-cta": "Solicitar Auditoria",
-                "hero-title": "Converta sua Empresa em uma <span class='text-primary'>Máquina de Vendas</span> 24/7",
-                "hero-sub": "Automatize suas Vendas, Prospecção e Atendimento ao Cliente em um só lugar. Conecte WhatsApp, IG, FB, Mercado Livre e todos os seus canais digitais em um ecossistema pronto para usar.",
-                "hero-cta-main": "Solicitar Auditoria de Mercado",
-                "hero-cta-sec": "Ver Planos",
-                "pain-title": "Pare de perder oportunidades comerciais",
-                "pain-sub": "A ineficiência na gestão de pedidos custa milhares de dólares em vendas perdidas.",
-                "pain-card-1-title": "Prospecção Ativa Automatizada", "pain-card-1-description": "Extraímos automaticamente bancos de dados de comércios varejistas e distribuidores locais do seu setor, iniciando campanhas de contato personalizadas por mensagens móveis para apresentar seu catálogo atacadista de forma direta.",
-                "pain-card-2-title": "Rede de Divulgação Multicanal", "pain-card-2-description": "Multiplicamos o alcance dos seus conteúdos. Processamos seus vídeos para torná-los únicos para os algoritmos e os distribuímos diariamente em uma rede de contas satélites dedicadas de Reels, TikTok e Shorts.",
-                "pain-card-3-title": "Investimento Publicitário Inteligente", "pain-card-3-description": "Monitoramos a tração dos vídeos em tempo real. Quando uma publicação demonstra interesse orgânico vencedor, o sistema ativa publicidade direcionada, reduzindo ao mínimo o custo de captação de pontos de venda.",
-                "pain-card-4-title": "Qualificação Conversacional e Fechamento", "pain-card-4-description": "Os interessados são recebidos por assistentes inteligentes que os filtram conforme volume de compra e região. Se cumprirem os requisitos, recebem seu catálogo atacadista e são encaminhados à equipe em uma caixa de entrada unificada.",
-                "security-title": "Segurança Avançada com Dispositivos Físicos Dedicados", "security-description": "Para marcas e fábricas que exigem grande escala, oferecemos a opção de operar suas linhas de comunicação e perfis de conteúdo diretamente em uma infraestrutura física de celulares reais e redes dedicadas de telefonia móvel. Isso simula interações humanas e conexões nativas em 100%, eliminando riscos de bloqueio e permitindo um volume de publicação massivo sem precedentes.",
-                "eco-tag": "Nossa Metodologia",
-                "eco-title": "O Ecossistema: Sua Vantagem Competitiva",
-                "layer-a-badge": "Inicial",
-                "layer-a-title": "Camada A: Recepção Inteligente",
-                "layer-a-description": "Otimize a entrada de dados e nunca perca um contato inicial de nenhum canal digital.",
-                "layer-a-feature-1": "Consolidação total (WA, IG, FB, Mercado Livre)",
-                "layer-a-feature-2": "Classificação por IA da intenção de compra",
-                "layer-a-feature-3": "Catálogos interativos automatizados",
-                "layer-b-badge": "Avançado",
-                "layer-b-title": "Camada B: Prospecção Ativa",
-                "layer-b-description": "Não espere que o cliente procure você. Vá conquistar o mercado com tecnologia.",
-                "layer-b-feature-1": "Varredura automática de mercado para novos prospects",
-                "layer-b-feature-2": "Enriquecimento de perfis comerciais",
-                "layer-b-feature-3": "Sistemas automatizados de reengajamento",
-                "plat-title": "Controle Total em uma Interface Moderna",
-                "plat-sub": "Visualize seu pipeline de vendas com clareza e tome decisões baseadas em dados reais.",
-                "price-title": "Planos Prontos para Usar",
-                "price-tag": "SISTEMAS PRONTOS PARA USO - CONEXÃO API INCLUÍDA",
-                "starter-plan-title": "Plano STARTER", "starter-plan-subtitle": "Pronto para vender", "starter-setup": "Configuração: $249 USD", "starter-period": "/ mês", "starter-feature-1": "Contatos ILIMITADOS", "starter-feature-2": "Inbox (WhatsApp, IG, FB, ML)", "starter-feature-3": "Automação e Conexão API", "starter-feature-4": "Suporte e Implementação Pronta para Uso", "advanced-badge": "MAIS ESCOLHIDO", "advanced-plan-title": "Plano AVANÇADO", "advanced-plan-subtitle": "Crescimento Contínuo", "advanced-setup": "Configuração: $999 USD", "advanced-period": "/ mês", "advanced-feature-1": "Tudo no Starter", "advanced-feature-2": "Prospecção Ativa Perpétua", "advanced-feature-3": "IA de Classificação Avançada", "advanced-feature-4": "Treinamento de IA Personalizado",
-                "plan-starter-cta": "Começar agora",
-                "plan-adv-cta": "Quero Escalar meu Negocio",
-                "final-cta": "Agendar minha Auditoria Gratuita",
-                "final-title": "Pronto para ligar seu motor de vendas?",
-                "final-sub": "Não deixe a concorrência levar os clientes que seu negócio merece.",
-                "footer-copy": "© 2026 STI ESTUDIO. Todos os direitos reservados.",
-                "footer-terms": "Termos",
-                "footer-priv": "Privacidade"
+                nav_sub: "Posicionamento & Prospecção",
+                nav_ecosystem: "Ecossistema Satélites",
+                nav_sectors: "B2B & E-Commerce",
+                nav_pillars: "Pilares de Engenharia",
+                nav_simulator: "Simulador",
+                nav_modalities: "Modalidades",
+                nav_cta: "Solicitar Diagnóstico",
+                hero_badge: "Infraestrutura de Visibilidade & Prospecção Ativa",
+                hero_title_p1: "POSICIONAMENTO DE MARCA",
+                hero_title_p2: "& PROSPECÇÃO CONTÍNUA",
+                hero_sub_start: "Infraestrutura tecnológica integral para",
+                hero_sub_highlight: "Fabricantes, Importadores, Atacadistas (B2B)",
+                hero_sub_middle: "e",
+                hero_sub_ecom: "E-Commerce de Alta Escala (B2C)",
+                hero_sub_end: ". Multiplicamos a visibilidade da sua marca, ativamos distribuição algorítmica com satélites e executamos prospecção contínua pronta para usar.",
+                pill_1: "Fábrica de Criativos Anti-Hash",
+                pill_2: "Rede de Satélites Replicadores & Boost",
+                pill_3: "Prospecção B2B & CRM Multiagente",
+                cta_hero_main: "Solicitar Sessão de Viabilidade & Diagnóstico",
+                cta_hero_sec: "Explorar Setores & Ecossistema",
+                sec_badge: "Impacto Especializado por Modelo de Negócio",
+                sec_title: "Engenharia Aplicada ao seu Setor",
+                sec_subtitle: "Nossa arquitetura de satélites e prospecção se adapta cirurgicamente à dinâmica de empresas atacadistas e marcas de consumo.",
+                sec_b2b_tag: "B2B // INDUSTRIAL & ATACADISTA",
+                sec_b2b_title: "Fabricantes, Importadores e Atacadistas (B2B)",
+                sec_b2b_desc: "Desbloqueie distribuição massiva de estoque e abertura contínua de novos pontos de venda em todo o país sem depender de representantes tradicionais.",
+                sec_b2b_p1: "Captação automatizada de comércios varejistas e distribuidores locais.",
+                sec_b2b_p2: "Apresentação de catálogos atacadistas direto no WhatsApp de compradores.",
+                sec_b2b_p3: "Autoridade absoluta e imagem industrial perante a concorrência.",
+                sec_b2b_obj: "Objetivo: Abertura de Contas B2B",
+                sec_b2b_ticket: "Alto Ticket",
+                sec_ecom_tag: "B2C // E-COMMERCE & CONSUMO",
+                sec_ecom_title: "E-Commerce e Marcas de Alta Escala (B2C)",
+                sec_ecom_desc: "Inunde as plataformas de vídeos curtos com ângulos infinitos de produto, quebre a desconfiança e reduza o custo de aquisição (CPA).",
+                sec_ecom_p1: "Teste simultâneo de 15+ variações (UGC, unboxing, solução) sem fadiga.",
+                sec_ecom_p2: "Injeção forçada de prova social (comentários reais de estoque, tamanhos e envio).",
+                sec_ecom_p3: "Anúncios diretos nas publicações orgânicas vencedoras (Partnership Ads).",
+                sec_ecom_obj: "Objetivo: Volume & Redução de CPA",
+                sec_ecom_rot: "Alta Rotatividade",
+                sat_badge: "Motor Proprietário de Distribuição",
+                sat_title: "Ecossistema de Satélites & Aceleração",
+                sat_subtitle: "Quatro camadas coordenadas para produzir criativos infinitos e forçar a viralidade orgânica.",
+                sat_p1_badge: "01 // FÁBRICA DE CONTEÚDO",
+                sat_p1_title: "Fábrica de Criativos Anti-Hash",
+                sat_p1_desc: "Produção de variações únicas com ganchos distintos para inundar Reels, TikTok e Shorts sem duplicidade algorítmica.",
+                sat_p1_tag: "Geração Anti-Hash de Vídeo",
+                sat_p2_badge: "02 // REDE DE DISTRIBUIÇÃO",
+                sat_p2_title: "Rede de Satélites Replicadores",
+                sat_p2_desc: "Contas embaixadoras que distribuem conteúdo em nichos geográficos isolados com perfis limpos e proxies dedicados.",
+                sat_p2_tag: "Replicadores Satélite Isolados",
+                sat_p3_badge: "03 // VALIDAÇÃO & IMPULSO",
+                sat_p3_title: "Validação Algorítmica",
+                sat_p3_desc: "Injeção de retenção obrigatória (watch time loops) e comentários reais de prova social para ativar recomendação.",
+                sat_p3_tag: "Boost Autônomo & Retenção",
+                sat_p4_badge: "04 // ESCALA PUBLICITÁRIA",
+                sat_p4_title: "Tráfego no Vencedor Orgânico",
+                sat_p4_desc: "Detectar qual vídeo explodiu e transformá-lo em anúncio pago mantendo toda a prova social acumulada.",
+                sat_p4_tag: "Tráfego sobre Vídeo Vencedor",
+                eng_badge: "Infraestrutura Robusta",
+                eng_title: "Prospecção, CRM & Segurança Física",
+                eng_subtitle: "O ecossistema não termina nas redes sociais: capturamos a intenção e canalizamos para vendas reais.",
+                eng_p1_title: "Prospecção Ativa B2B",
+                eng_p1_desc: "Extração contínua de bancos de dados de varejistas e distribuidores, iniciando campanhas no WhatsApp com catálogos interativos.",
+                eng_p2_title: "Qualificação & CRM Multiagente",
+                eng_p2_desc: "Centralização total (WhatsApp, Instagram, Facebook, Mercado Livre). Assistentes inteligentes filtram volume e região.",
+                eng_p3_title: "Hardware Dedicado & Segurança",
+                eng_p3_desc: "Para grandes marcas, operamos linhas e perfis em celulares físicos reais e redes dedicadas. Zero risco de bloqueios.",
+                sim_badge: "Simulador de Projeção de Demanda",
+                sim_title: "Projete a Escala Comercial da sua Empresa",
+                sim_subtitle: "Ajuste sua meta mensal de novos comércios ou clientes atacadistas para estimar a infraestrutura.",
+                sim_label: "Meta Mensal de Lojas / Clientes:",
+                sim_step_1: "10 (Nível Inicial)",
+                sim_step_2: "50 (Escala Regional)",
+                sim_step_3: "200 (Expansão Nacional)",
+                sim_step_4: "500+ (Liderança de Mercado)",
+                sim_out1_title: "Impacto de Alcance Satelital",
+                sim_out1_sub: "Visualizações orgânicas qualificadas",
+                sim_out2_title: "Contatos / Lojas Mapeadas",
+                sim_out2_sub: "Prospects identificados",
+                sim_out3_title: "Ciclo Estimado de Fechamento",
+                sim_out3_sub: "Velocidade de incorporação",
+                sim_cta: "Validar Viabilidade do meu Projeto",
+                mod_badge: "Modelos de Implementação",
+                mod_title: "Modalidades de Trabalho",
+                mod_subtitle: "Adaptamos nossa tecnologia à estrutura operacional e escala da sua empresa.",
+                mod_1_tag: "MODALIDADE 01 // INTEGRADA",
+                mod_1_prefix: "Infraestrutura",
+                mod_1_highlight: "Para sua Equipe Comercial",
+                mod_1_desc: "Conectamos satélites, criativos e prospecção. Enviamos os leads qualificados diretamente para sua equipe no WhatsApp/CRM.",
+                mod_1_point_1: "Integração direta com seu CRM / WhatsApp de vendas",
+                mod_1_point_2: "Controle total do fechamento pela sua equipe",
+                mod_1_point_3: "Otimização contínua de sinais e satélites",
+                mod_1_cta: "Consultar Viabilidade Integrada",
+                mod_2_tag: "MAIS ESCOLHIDO // MÁXIMA EFICIÊNCIA",
+                mod_2_prefix: "Operação",
+                mod_2_highlight: "Pronta para Usar (Turnkey)",
+                mod_2_desc: "Serviço 100% gerenciado. Produzimos os vídeos, operamos os satélites, anunciamos o vencedor e entregamos os pedidos confirmados.",
+                mod_2_point_1: "Gestão completa de criativos, satélites e anúncios",
+                mod_2_point_2: "Entrega de compras atacadistas prontas",
+                mod_2_point_3: "Acompanhamento estratégico e escala mensal",
+                mod_2_cta: "Solicitar Operação Pronta para Usar",
+                cta_final: "Solicitar Sessão de Viabilidade & Diagnóstico",
+                cta_subnote: "Capacidade de implementação limitada por região geográfica para garantir exclusividade.",
+                footer_privacy: "Privacidade",
+                footer_terms: "Termos"
             },
             en: {
-                "nav-sol": "Solutions",
-                "nav-eco": "Ecosystem",
-                "nav-plat": "Platform",
-                "nav-price": "Pricing",
-                "nav-cta": "Request Audit",
-                "hero-title": "Convert your Company into a <span class='text-primary'>Sales Machine</span> 24/7",
-                "hero-sub": "Automate your Sales, Prospecting and Customer Service in one place. Connect WhatsApp, IG, FB, Mercado Libre and all your digital channels in a turnkey ecosystem.",
-                "hero-cta-main": "Request Market Audit",
-                "hero-cta-sec": "View Plans",
-                "pain-title": "Stop losing business opportunities",
-                "pain-sub": "Inefficiency in order management costs you thousands of dollars in lost sales.",
-                "pain-card-1-title": "Automated Active Prospecting", "pain-card-1-description": "We automatically extract databases of retail businesses and local distributors in your industry, launching personalized mobile messaging campaigns to present your wholesale catalog directly.",
-                "pain-card-2-title": "Multichannel Distribution Network", "pain-card-2-description": "We multiply the reach of your content. We process your videos to make them unique to algorithms and distribute them daily through a network of satellite accounts dedicated to Reels, TikTok, and Shorts.",
-                "pain-card-3-title": "Intelligent Advertising Investment", "pain-card-3-description": "We monitor video traction in real time. When a post shows winning organic interest, the system activates targeted advertising, reducing the cost of acquiring sales outlets to a minimum.",
-                "pain-card-4-title": "Conversational Qualification and Closing", "pain-card-4-description": "Interested prospects are received by intelligent assistants that filter them by purchase volume and area. If they meet the requirements, they receive your wholesale catalog and are routed to the team in a unified inbox.",
-                "security-title": "Advanced Security Through Dedicated Physical Devices", "security-description": "For brands and factories that require large-scale operations, we offer the option to run your communication lines and content profiles directly on a physical infrastructure of real mobile devices and dedicated cellular networks. This simulates human interactions and native connections 100%, eliminating blocking risks and enabling unprecedented publishing volume.",
-                "eco-tag": "Our Methodology",
-                "eco-title": "The Ecosystem: Your Competitive Advantage",
-                "layer-a-badge": "Starter",
-                "layer-a-title": "Layer A: Smart Intake",
-                "layer-a-description": "Optimize data intake and never lose an initial contact from any digital channel.",
-                "layer-a-feature-1": "Full consolidation (WA, IG, FB, Mercado Libre)",
-                "layer-a-feature-2": "AI purchase-intent classification",
-                "layer-a-feature-3": "Automated interactive catalogs",
-                "layer-b-badge": "Advanced",
-                "layer-b-title": "Layer B: Active Prospecting",
-                "layer-b-description": "Don't wait for customers to find you. Go win the market with technology.",
-                "layer-b-feature-1": "Automated market scanning for new prospects",
-                "layer-b-feature-2": "Commercial profile enrichment",
-                "layer-b-feature-3": "Automated re-engagement systems",
-                "plat-title": "Total Control in a Modern Interface",
-                "plat-sub": "Visualize your sales pipeline with clear clarity and make decisions based on real data.",
-                "price-title": "Turnkey Plans",
-                "price-tag": "READY TO USE SYSTEMS - API CONNECTION INCLUDED",
-                "starter-plan-title": "STARTER Plan", "starter-plan-subtitle": "Turnkey: Ready to sell", "starter-setup": "Setup: $249 USD", "starter-period": "/ month", "starter-feature-1": "UNLIMITED contacts", "starter-feature-2": "Inbox (WhatsApp, IG, FB, ML)", "starter-feature-3": "Automation and API connection", "starter-feature-4": "Turnkey support and setup", "advanced-badge": "MOST POPULAR", "advanced-plan-title": "ADVANCED Plan", "advanced-plan-subtitle": "Continuous Growth", "advanced-setup": "Setup: $999 USD", "advanced-period": "/ month", "advanced-feature-1": "Everything in Starter", "advanced-feature-2": "Perpetual Active Prospecting", "advanced-feature-3": "Advanced Classification AI", "advanced-feature-4": "Personalized AI training",
-                "plan-starter-cta": "Start now",
-                "plan-adv-cta": "I Want to Scale my Business",
-                "final-cta": "Schedule my Free Audit",
-                "final-title": "Ready to fire up your sales engine?",
-                "final-sub": "Don't let the competition take the customers your business deserves.",
-                "footer-copy": "© 2026 STI ESTUDIO. All rights reserved.",
-                "footer-terms": "Terms",
-                "footer-priv": "Privacy"
+                nav_sub: "Positioning & Prospecting",
+                nav_ecosystem: "Satellite Ecosystem",
+                nav_sectors: "B2B & E-Commerce",
+                nav_pillars: "Engineering Pillars",
+                nav_simulator: "Simulator",
+                nav_modalities: "Modalities",
+                nav_cta: "Request Diagnosis",
+                hero_badge: "Brand Visibility & Active Prospecting Infrastructure",
+                hero_title_p1: "BRAND POSITIONING",
+                hero_title_p2: "& PERPETUAL PROSPECTING",
+                hero_sub_start: "Comprehensive tech infrastructure for",
+                hero_sub_highlight: "Manufacturers, Importers, Wholesalers (B2B)",
+                hero_sub_middle: "and",
+                hero_sub_ecom: "High-Scale E-Commerce (B2C)",
+                hero_sub_end: ". We multiply your brand visibility, unlock algorithmic distribution with satellites, and drive turnkey perpetual prospecting.",
+                pill_1: "Anti-Hash Creative Engine",
+                pill_2: "Replicator Satellites & Boost Network",
+                pill_3: "B2B Prospecting & Multi-Agent CRM",
+                cta_hero_main: "Request Feasibility & Diagnosis Session",
+                cta_hero_sec: "Explore Sectors & Ecosystem",
+                sec_badge: "Specialized Impact by Business Model",
+                sec_title: "Engineering Applied to Your Industry",
+                sec_subtitle: "Our satellite and prospecting architecture is precisely adapted to wholesale enterprises and high-scale consumer brands.",
+                sec_b2b_tag: "B2B // INDUSTRIAL & WHOLESALE",
+                sec_b2b_title: "Manufacturers, Importers & Wholesalers (B2B)",
+                sec_b2b_desc: "Unlock massive inventory placement and open retail accounts across the country without relying on traditional traveling sales reps.",
+                sec_b2b_p1: "Automated acquisition of local retailers and regional distributors.",
+                sec_b2b_p2: "Direct wholesale catalog delivery to buyer WhatsApp accounts.",
+                sec_b2b_p3: "Absolute authority and industrial status against competitors.",
+                sec_b2b_obj: "Objective: B2B Account Acquisition",
+                sec_b2b_ticket: "High Ticket",
+                sec_ecom_tag: "B2C // E-COMMERCE & D2C",
+                sec_ecom_title: "E-Commerce & High-Scale Brands (B2C)",
+                sec_ecom_desc: "Flood short-form video platforms with infinite product angles, eliminate buyer friction, and push customer acquisition costs (CPA) down.",
+                sec_ecom_p1: "Simultaneous testing of 15+ variations (UGC, unboxing, problem-solver) without ad fatigue.",
+                sec_ecom_p2: "Forced social proof injection (genuine comments regarding stock, sizing, and delivery).",
+                sec_ecom_p3: "Direct paid traffic behind organic winners (Partnership Ads / Existing Post).",
+                sec_ecom_obj: "Objective: Volume & CPA Reduction",
+                sec_ecom_rot: "High Turnover",
+                sat_badge: "Proprietary Distribution Engine",
+                sat_title: "Satellite & Acceleration Ecosystem",
+                sat_subtitle: "Four synchronized layers to generate infinite creatives, bypass platform fatigue, and force organic virality.",
+                sat_p1_badge: "01 // CREATION ENGINE",
+                sat_p1_title: "Anti-Hash Creative Engine",
+                sat_p1_desc: "Production of unique variations with distinct hooks to flood Reels, TikTok, and Shorts without algorithm duplicate penalties.",
+                sat_p1_tag: "FFmpeg Binary Un-Hashing",
+                sat_p2_badge: "02 // DISTRIBUTION MESH",
+                sat_p2_title: "Replicator Satellites Mesh",
+                sat_p2_desc: "Ambassador accounts distributing content across isolated geographic niches using clean fingerprints and dedicated residential proxies.",
+                sat_p2_tag: "Isolated Replicators (Sat A)",
+                sat_p3_badge: "03 // MOMENTUM INJECTION",
+                sat_p3_title: "Algorithmic Validation",
+                sat_p3_desc: "Early mandatory watch time loops and genuine social proof comments to trigger organic platform recommendation.",
+                sat_p3_tag: "Autonomous Boost (Sat B)",
+                sat_p4_badge: "04 // PAID SCALING",
+                sat_p4_title: "Organic Winner Paid Scaling",
+                sat_p4_desc: "Identify breakout posts and transition them into paid ads while preserving all accumulated social proof (Partnership Ads).",
+                sat_p4_tag: "Winner-to-Ad Scaling",
+                eng_badge: "Robust Infrastructure",
+                eng_title: "Prospecting, CRM & Dedicated Hardware",
+                eng_subtitle: "The engine goes beyond social media: we capture intent and channel it into real commercial transactions.",
+                eng_p1_title: "Active B2B Prospecting",
+                eng_p1_desc: "Continuous automated scanning of retailers and distributors in your industry, launching direct outreach with interactive wholesale catalogs.",
+                eng_p2_title: "Qualification & Multi-Agent CRM",
+                eng_p2_desc: "Unified inbox (WhatsApp, Instagram, Facebook, Mercado Libre). Intelligent assistants filter volume and route ready buyers.",
+                eng_p3_title: "Dedicated Hardware Security",
+                eng_p3_desc: "For high-scale brands, we operate profiles on real physical mobile devices and dedicated cellular networks. 100% human emulation.",
+                sim_badge: "Demand Projection Simulator",
+                sim_title: "Project Your Commercial Scale",
+                sim_subtitle: "Adjust your monthly target of new retail accounts or wholesale clients to estimate infrastructure requirements.",
+                sim_label: "Monthly Target of Accounts / Clients:",
+                sim_step_1: "10 (Initial Level)",
+                sim_step_2: "50 (Regional Scale)",
+                sim_step_3: "200 (National Expansion)",
+                sim_step_4: "500+ (Market Leadership)",
+                sim_out1_title: "Satellite Reach Impact",
+                sim_out1_sub: "Qualified organic views",
+                sim_out2_title: "Contacts / Stores Mapped",
+                sim_out2_sub: "Identified prospects",
+                sim_out3_title: "Estimated Deal Cycle",
+                sim_out3_sub: "Onboarding velocity",
+                sim_cta: "Validate My Project Feasibility",
+                mod_badge: "Implementation Models",
+                mod_title: "Work Modalities",
+                mod_subtitle: "We tailor our technology infrastructure to your operational structure and enterprise scale.",
+                mod_1_tag: "MODALITY 01 // INTEGRATED",
+                mod_1_prefix: "Infrastructure",
+                mod_1_highlight: "For Your Internal Sales Team",
+                mod_1_desc: "We deploy the satellite network, creative engine, and prospecting engine, routing qualified leads directly to your sales team on WhatsApp/CRM.",
+                mod_1_point_1: "Direct integration with your commercial WhatsApp / CRM",
+                mod_1_point_2: "Complete control of closing and invoicing by your team",
+                mod_1_point_3: "Continuous optimization of signals and satellite network",
+                mod_1_cta: "Inquire Integrated Feasibility",
+                mod_2_tag: "MOST POPULAR // MAXIMUM EFFICIENCY",
+                mod_2_prefix: "Turnkey",
+                mod_2_highlight: "Full Delegation (Turnkey)",
+                mod_2_desc: "Complete end-to-end operation. We craft video variations, manage satellites, run paid scaling on winners, and deliver confirmed wholesale orders.",
+                mod_2_point_1: "100% autonomous management of creatives, satellites, and ads",
+                mod_2_point_2: "Direct delivery of confirmed wholesale purchases and clients",
+                mod_2_point_3: "Strategic advisory and guaranteed monthly expansion",
+                mod_2_cta: "Request Turnkey Operation",
+                cta_final: "Request Feasibility & Diagnosis Session",
+                cta_subnote: "Implementation capacity is limited by geographic market to preserve competitive exclusivity.",
+                footer_privacy: "Privacy",
+                footer_terms: "Terms"
             }
         };
 
-        function changeLanguage(lang) {
+        function setLanguage(lang) {
+            currentLang = lang;
+            try {
+                localStorage.setItem('sti_lang', lang);
+            } catch(e) {}
+
+            document.documentElement.lang = lang;
+
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('btn-' + lang);
+            if (activeBtn) activeBtn.classList.add('active');
+
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
-                if (translations[lang][key]) {
-                    el.innerHTML = translations[lang][key];
+                if (translations[lang] && translations[lang][key] !== undefined) {
+                    el.innerText = translations[lang][key];
                 }
             });
-            document.documentElement.lang = lang;
+
+            // Update simulator text dynamically
+            const slider = document.getElementById('capacity-slider');
+            if (slider) updateSimulator(slider.value);
         }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', () => {
+            let savedLang = 'es';
+            try {
+                savedLang = localStorage.getItem('sti_lang') || 'es';
+            } catch(e) {}
+            setLanguage(savedLang);
+        });
     </script>
 </body>
-
 </html>
