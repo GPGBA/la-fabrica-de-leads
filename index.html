@@ -249,12 +249,93 @@
             </div>
         </section>
 
-        <!-- SECTION: Platform Cockpit Image -->
+        <!-- SECTION: Live AlgoBoost Cockpit Visual (Comparativa Antes vs Después) -->
         <section class="py-12 px-4 relative bg-[#07090E]">
             <div class="max-w-6xl mx-auto">
-                <div class="relative rounded-3xl border border-cyan-glow/20 overflow-hidden shadow-2xl bg-surface-dark/60 backdrop-blur-md p-2">
-                    <img src="images/kanban.png" alt="Control de Campañas y Resultados en Vivo" class="w-full h-auto rounded-2xl opacity-90" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#07090E] via-transparent to-transparent pointer-events-none"></div>
+                <div class="relative rounded-3xl border border-cyan-glow/20 overflow-hidden shadow-2xl bg-surface-dark/80 backdrop-blur-md p-6 md:p-8">
+                    <!-- Top Cockpit Header -->
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-white/5 mb-8">
+                        <div class="flex items-center gap-3">
+                            <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
+                            <span class="mono text-xs font-bold text-cyan-glow uppercase tracking-wider">
+                                TMKT ENGINE // MONITOR DE ACELERACIÓN ALGORÍTMICA EN VIVO
+                            </span>
+                        </div>
+                        <div class="mono text-[11px] text-slate-400 bg-black/40 px-3 py-1.5 rounded-full border border-white/5">
+                            Ventana de Inyección: <span class="text-white font-bold">Primeros 15 Minutos</span>
+                        </div>
+                    </div>
+
+                    <!-- Comparison Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Left: Sin AlgoBoost -->
+                        <div class="p-6 rounded-2xl bg-[#090D17] border border-red-500/20 relative">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="mono text-xs text-red-400 font-bold uppercase">❌ Publicación Convencional</span>
+                                <span class="text-[10px] mono px-2.5 py-1 rounded bg-red-500/10 text-red-400">Sin Impulso</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-slate-200 mb-1">Algoritmo Estancado</h4>
+                            <p class="text-xs text-slate-400 mb-6">El video se publica y no recibe tracción inmediata. La plataforma detiene la distribución.</p>
+
+                            <!-- Metrics Box -->
+                            <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-black/50 border border-white/5 text-center mb-4">
+                                <div>
+                                    <div class="text-base font-black text-slate-300">214</div>
+                                    <div class="text-[10px] text-slate-500 mono">Reproducciones</div>
+                                </div>
+                                <div>
+                                    <div class="text-base font-black text-slate-300">4</div>
+                                    <div class="text-[10px] text-slate-500 mono">Likes</div>
+                                </div>
+                                <div>
+                                    <div class="text-base font-black text-red-400">0</div>
+                                    <div class="text-[10px] text-slate-500 mono">Comentarios</div>
+                                </div>
+                            </div>
+                            <div class="p-3 rounded-xl bg-red-950/20 border border-red-500/20 text-xs text-red-300/80">
+                                ⚠️ Resultado: Instagram y TikTok sepultan el post a los 45 minutos. Cero ventas generadas.
+                            </div>
+                        </div>
+
+                        <!-- Right: Con TMKT AlgoBoost -->
+                        <div class="p-6 rounded-2xl bg-[#0B1528] border border-cyan-glow/40 relative glow-cyan">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="mono text-xs text-cyan-glow font-bold uppercase">⚡ Con TMKT AlgoBoost</span>
+                                <span class="text-[10px] mono px-2.5 py-1 rounded bg-cyan-glow/20 text-cyan-glow font-bold animate-pulse">Recomendado en Explorar</span>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-1">Ruptura Algorítmica Activa</h4>
+                            <p class="text-xs text-slate-300 mb-6">Inyección de retención y prueba social humana antes de los 15 min. Fuerza la entrega viral.</p>
+
+                            <!-- Metrics Box -->
+                            <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-black/60 border border-cyan-glow/20 text-center mb-4">
+                                <div>
+                                    <div class="text-base font-black text-cyan-glow">4.820+</div>
+                                    <div class="text-[10px] text-slate-300 mono">Reproducciones</div>
+                                </div>
+                                <div>
+                                    <div class="text-base font-black text-white">412</div>
+                                    <div class="text-[10px] text-slate-300 mono">Likes</div>
+                                </div>
+                                <div>
+                                    <div class="text-base font-black text-emerald-400">56</div>
+                                    <div class="text-[10px] text-slate-300 mono">Comentarios</div>
+                                </div>
+                            </div>
+
+                            <!-- Real Contextual Comments Feed -->
+                            <div class="space-y-2 p-3 rounded-xl bg-black/40 border border-white/5 text-[11px] font-mono">
+                                <div class="flex items-center gap-2 text-slate-300">
+                                    <span class="text-cyan-glow font-bold">@sofia_moda:</span> "¿Tienen stock en talle M y hacen envíos al interior?"
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-300">
+                                    <span class="text-cyan-glow font-bold">@distribuidora_norte:</span> "Hola! Me pasarías lista de precios y compra mínima?"
+                                </div>
+                                <div class="flex items-center gap-2 text-slate-300">
+                                    <span class="text-cyan-glow font-bold">@martin_g:</span> "¿A qué hora abren hoy? ¿Hay que reservar mesa?"
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -367,7 +448,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Cero Software -->
-                    <div class="glass p-8 rounded-3xl border border-white/5 text-center">
+                    <div class="glass-card p-8 rounded-3xl border border-white/10 text-center hover:border-cyan-glow/50 transition-all cursor-pointer">
                         <div class="w-16 h-16 mx-auto rounded-2xl bg-cyan-glow/10 border border-cyan-glow/30 text-cyan-glow flex items-center justify-center mb-6">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"/></svg>
                         </div>
@@ -378,7 +459,7 @@
                     </div>
 
                     <!-- Cero Riesgo -->
-                    <div class="glass p-8 rounded-3xl border border-white/5 text-center">
+                    <div class="glass-card p-8 rounded-3xl border border-white/10 text-center hover:border-blue-400/50 transition-all cursor-pointer">
                         <div class="w-16 h-16 mx-auto rounded-2xl bg-blue-500/10 border border-blue-500/30 text-blue-400 flex items-center justify-center mb-6">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg>
                         </div>
@@ -389,7 +470,7 @@
                     </div>
 
                     <!-- 100% Llave en mano -->
-                    <div class="glass p-8 rounded-3xl border border-cyan-glow/30 text-center glow-cyan">
+                    <div class="glass-card p-8 rounded-3xl border border-cyan-glow/40 text-center glow-cyan hover:border-cyan-glow transition-all cursor-pointer">
                         <div class="w-16 h-16 mx-auto rounded-2xl bg-cyan-glow/20 border border-cyan-glow text-cyan-glow flex items-center justify-center mb-6">
                             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
                         </div>
@@ -500,159 +581,182 @@
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Top 3 AlgoBoost Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                     <!-- PLAN 1: Impulso -->
-                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between border border-white/5">
+                    <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border border-white/5">
                         <div>
                             <div class="mono text-[11px] text-slate-400 font-bold uppercase mb-2">PLAN 01 // IMPULSO</div>
                             <h3 class="text-xl font-bold text-white mb-2">Validación Inicial</h3>
                             <div class="text-3xl font-black text-cyan-glow mb-4">$57 <span class="text-xs font-normal text-slate-400">USD / mes</span></div>
                             <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                                Ideal para negocios que publican 3 veces por semana y quieren salir de las 200 vistas.
+                                Ideal para marcas y locales que publican 3 veces por semana y quieren romper el tope de las 200 vistas.
                             </p>
-                            <ul class="space-y-2.5 text-xs font-mono text-slate-300 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 12 publicaciones / mes (3x sem)</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Empuje en primeros 20 min</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Comentarios contextuales humanos</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Gestión directa por WhatsApp</li>
+                            <ul class="space-y-3 text-xs font-mono text-slate-300 mb-8">
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 12 publicaciones / mes (3x por semana)</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Empuje algorítmico en primeros 20 min</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Comentarios contextuales humanos de compra</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Gestión directa por WhatsApp (Fricción Cero)</li>
                             </ul>
                         </div>
                         <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20activar%20el%20Plan%20Impulso%20de%20$57%20USD"
                             target="_blank"
-                            class="w-full text-center py-3 bg-white/5 hover:bg-white/10 text-white font-bold text-xs rounded-xl border border-white/10 transition-all cursor-pointer">
-                            Elegir Plan Impulso
+                            class="w-full text-center py-3.5 bg-white/5 hover:bg-white/10 text-white font-bold text-xs rounded-xl border border-white/10 transition-all cursor-pointer">
+                            Elegir Plan Impulso ($57)
                         </a>
                     </div>
 
                     <!-- PLAN 2: Crecimiento (Recomendado) -->
-                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between border-2 border-cyan-glow relative shadow-lg shadow-cyan-glow/10">
-                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-0.5 rounded-full bg-cyan-glow text-black mono text-[10px] font-extrabold uppercase">
-                            Más Elegido
+                    <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border-2 border-cyan-glow relative shadow-lg shadow-cyan-glow/10">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-cyan-glow text-black mono text-[10px] font-black uppercase tracking-wider shadow-md">
+                            MÁS ELEGIDO // ALTO RENDIMIENTO
                         </div>
                         <div>
                             <div class="mono text-[11px] text-cyan-glow font-bold uppercase mb-2">PLAN 02 // CRECIMIENTO</div>
                             <h3 class="text-xl font-bold text-white mb-2">Exposición Total</h3>
                             <div class="text-3xl font-black text-cyan-glow mb-4">$97 <span class="text-xs font-normal text-slate-400">USD / mes</span></div>
                             <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                                Para marcas activas que buscan empuje constante más público nuevo de nicho.
+                                Para marcas activas que buscan empuje continuo y atracción de público nuevo geolocalizado.
                             </p>
-                            <ul class="space-y-2.5 text-xs font-mono text-slate-300 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 20 publicaciones / mes (5x sem)</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Todo lo del Plan 1</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Difusión en cuentas de nicho</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Cobertura en horarios pico</li>
+                            <ul class="space-y-3 text-xs font-mono text-slate-300 mb-8">
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 20 publicaciones / mes (5x por semana)</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Todo lo del Plan 1 (Impulso 20 min)</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Difusión y réplica en cuentas de nicho</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Cobertura prioritaria en franjas nocturnas y findes</li>
                             </ul>
                         </div>
                         <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20activar%20el%20Plan%20Crecimiento%20de%20$97%20USD"
                             target="_blank"
-                            class="w-full text-center py-3 bg-gradient-to-r from-cyan-glow to-blue-500 text-black font-bold text-xs rounded-xl shadow-md transition-all hover:opacity-95 cursor-pointer">
-                            Elegir Plan Crecimiento
+                            class="w-full text-center py-3.5 bg-gradient-to-r from-cyan-glow to-blue-500 text-black font-extrabold text-xs rounded-xl shadow-lg transition-all hover:opacity-95 cursor-pointer glow-cyan">
+                            Elegir Plan Crecimiento ($97)
                         </a>
                     </div>
 
                     <!-- PLAN 3: Dominación Diaria -->
-                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between border border-white/5">
+                    <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border border-white/5">
                         <div>
                             <div class="mono text-[11px] text-slate-400 font-bold uppercase mb-2">PLAN 03 // DIARIO FULL</div>
                             <h3 class="text-xl font-bold text-white mb-2">Dominación Diaria</h3>
                             <div class="text-3xl font-black text-cyan-glow mb-4">$127 <span class="text-xs font-normal text-slate-400">USD / mes</span></div>
                             <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                                Para marcas y cadenas que publican a diario y exigen máxima tracción continua.
+                                Para marcas y cadenas que publican todos los días y exigen máxima tracción continua.
                             </p>
-                            <ul class="space-y-2.5 text-xs font-mono text-slate-300 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 30 publicaciones / mes (diario)</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Aceleración de alto volumen</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Distribución constante de satélites</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Reporte mensual de métricas</li>
+                            <ul class="space-y-3 text-xs font-mono text-slate-300 mb-8">
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 30 publicaciones / mes (1 post diario garantizado)</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Máxima prioridad de inyección y retención</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Replicación constante en red de satélites</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Reporte mensual avanzado de rendimiento</li>
                             </ul>
                         </div>
                         <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20activar%20el%20Plan%20Dominaci%C3%B3n%20de%20$127%20USD"
                             target="_blank"
-                            class="w-full text-center py-3 bg-white/5 hover:bg-white/10 text-white font-bold text-xs rounded-xl border border-white/10 transition-all cursor-pointer">
-                            Elegir Plan Diario
+                            class="w-full text-center py-3.5 bg-white/5 hover:bg-white/10 text-white font-bold text-xs rounded-xl border border-white/10 transition-all cursor-pointer">
+                            Elegir Plan Diario ($127)
                         </a>
                     </div>
+                </div>
 
-                    <!-- PLAN 4: Prospección B2B Llave en Mano -->
-                    <div class="glass-card p-6 rounded-3xl flex flex-col justify-between border border-blue-500/30 bg-blue-950/20">
-                        <div>
-                            <div class="mono text-[11px] text-blue-400 font-bold uppercase mb-2">B2B // LLAVE EN MANO</div>
-                            <h3 class="text-xl font-bold text-white mb-2">Expansión Mayorista</h3>
-                            <div class="text-3xl font-black text-white mb-4">$400 - $600 <span class="text-xs font-normal text-slate-400">USD</span></div>
-                            <p class="text-slate-400 text-xs leading-relaxed mb-6">
-                                Para Fabricantes e Importadores. Prospección activa directa a WhatsApp de comercios.
+                <!-- Bottom Full-Width Horizontal Banner: B2B Llave en Mano -->
+                <div class="glass-card p-8 md:p-10 rounded-3xl border border-blue-500/40 bg-gradient-to-r from-blue-950/40 via-[#0B1528] to-[#07090E] relative overflow-hidden shadow-2xl">
+                    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+                        <div class="max-w-3xl">
+                            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/40 mono text-[10px] text-blue-300 font-bold uppercase mb-4">
+                                <span>🏭 B2B // SOLUCIÓN LLAVE EN MANO PARA FABRICANTES & IMPORTADORES</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">
+                                Apertura Masiva de Puntos de Venta & Prospección Mayorista
+                            </h3>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                                Olvidate de los viajantes tradicionales y los costos fijos. Escaneamos tu mercado y llevamos tu catálogo mayorista directo al WhatsApp de dueños y encargados de compras listos para comprar por bulto cerrado.
                             </p>
-                            <ul class="space-y-2.5 text-xs font-mono text-slate-300 mb-6">
-                                <li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> 500+ comercios contactados / mes</li>
-                                <li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> Catálogo directo a compradores</li>
-                                <li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> Derivación de clientes listos</li>
-                                <li class="flex items-center gap-2"><span class="text-blue-400 font-bold">✓</span> AlgoBoost corporativo incluido</li>
-                            </ul>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-slate-300">
+                                <div class="flex items-center gap-2">
+                                    <span class="text-cyan-glow font-bold">✓</span> <strong>1.500 a 3.000+</strong> comercios contactados por mes
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-cyan-glow font-bold">✓</span> Catálogo digital entregado en WhatsApp a compradores
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-cyan-glow font-bold">✓</span> Derivación de clientes listos a tu equipo
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="text-cyan-glow font-bold">✓</span> AlgoBoost Corporativo incluido para blindar tu marca
+                                </div>
+                            </div>
                         </div>
-                        <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20conocer%20la%20Prospecci%C3%B3n%20B2B%20Llave%20en%20Mano%20para%20Fabricantes"
-                            target="_blank"
-                            class="w-full text-center py-3 border border-blue-400 text-blue-300 hover:bg-blue-400 hover:text-black font-bold text-xs rounded-xl transition-all cursor-pointer">
-                            Consultar Expansión B2B
-                        </a>
+
+                        <!-- Price & CTA Column -->
+                        <div class="lg:text-right w-full lg:w-auto flex flex-col items-start lg:items-end gap-3 min-w-[240px]">
+                            <div class="mono text-xs text-slate-400 uppercase">Inversión Mensual Llave en Mano</div>
+                            <div class="text-3xl md:text-4xl font-black text-white">
+                                $400 - $600 <span class="text-xs font-normal text-slate-400">USD</span>
+                            </div>
+                            <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20solicitar%20la%20Prospecci%C3%B3n%20Mayorista%20B2B%20Llave%20en%20Mano%20(1500%20a%203000%20comercios)"
+                                target="_blank"
+                                class="w-full sm:w-auto text-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-glow text-black font-extrabold text-xs rounded-xl shadow-lg transition-all hover:opacity-95 cursor-pointer glow-cyan">
+                                Consultar Expansión Mayorista B2B
+                            </a>
+                            <span class="text-[10px] mono text-slate-400">Exclusividad por rubro y zona geográfica</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: Interactive Demand Simulator -->
+        <!-- SECTION: Interactive AlgoBoost Impact Calculator -->
         <section id="simulador" class="py-24 px-4 relative bg-[#090D17]">
-            <div class="max-w-4xl mx-auto glass p-8 md:p-12 rounded-3xl border border-cyan-glow/20 glow-cyan">
+            <div class="max-w-4xl mx-auto glass-card p-8 md:p-12 rounded-3xl border border-cyan-glow/30 glow-cyan">
                 <div class="text-center mb-10">
                     <div class="mono text-cyan-glow text-xs uppercase tracking-widest mb-2 font-bold" data-i18n="sim_badge">
-                        Simulador de Proyección de Demanda
+                        Calculadora de Retorno Algorítmico
                     </div>
                     <h2 class="heading-font text-2xl md:text-4xl font-extrabold text-white mb-3" data-i18n="sim_title">
-                        Proyecte la Escala Comercial de su Empresa
+                        Proyectá el Impacto en tus Publicaciones
                     </h2>
                     <p class="text-slate-400 text-xs md:text-sm" data-i18n="sim_subtitle">
-                        Ajuste su objetivo mensual de nuevos comercios minoristas o clientes mayoristas para estimar la infraestructura requerida.
+                        Ajustá la cantidad de videos que publicás por mes para proyectar el alcance estimado, los comentarios de compra y el ahorro publicitario.
                     </p>
                 </div>
 
                 <!-- Slider Control -->
                 <div class="mb-10 space-y-4">
                     <div class="flex justify-between items-center text-sm font-mono">
-                        <span class="text-slate-400" data-i18n="sim_label">Objetivo Mensual de Puntos de Venta / Clientes:</span>
-                        <span id="capacity-display" class="text-cyan-glow text-xl font-black">50 Clientes / Comercios</span>
+                        <span class="text-slate-400" data-i18n="sim_label">Frecuencia Mensual de Publicación:</span>
+                        <span id="capacity-display" class="text-cyan-glow text-xl font-black">12 Videos / Posts al mes</span>
                     </div>
-                    <input type="range" id="capacity-slider" min="10" max="500" step="10" value="50" class="w-full" oninput="updateSimulator(this.value)">
+                    <input type="range" id="capacity-slider" min="4" max="30" step="2" value="12" class="w-full" oninput="updateSimulator(this.value)">
                     <div class="flex justify-between text-[11px] font-mono text-slate-500">
-                        <span data-i18n="sim_step_1">10 (Nivel Inicial)</span>
-                        <span data-i18n="sim_step_2">50 (Escala Regional)</span>
-                        <span data-i18n="sim_step_3">200 (Expansión Nacional)</span>
-                        <span data-i18n="sim_step_4">500+ (Dominación de Mercado)</span>
+                        <span data-i18n="sim_step_1">4 (1 por semana)</span>
+                        <span data-i18n="sim_step_2">12 (3 por semana)</span>
+                        <span data-i18n="sim_step_3">20 (5 por semana)</span>
+                        <span data-i18n="sim_step_4">30 (1 diario)</span>
                     </div>
                 </div>
 
                 <!-- Output Cards -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
-                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out1_title">Impacto de Alcance Satelital</div>
-                        <div id="reach-display" class="text-xl md:text-2xl font-black text-white">65.000 - 140.000</div>
-                        <div class="text-[10px] text-cyan-glow/80 mt-1" data-i18n="sim_out1_sub">Vistas orgánicas calificadas</div>
+                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out1_title">Alcance Orgánico Estimado</div>
+                        <div id="reach-display" class="text-xl md:text-2xl font-black text-white">26.400 - 66.000</div>
+                        <div class="text-[10px] text-cyan-glow/80 mt-1" data-i18n="sim_out1_sub">Vistas calificadas de nicho</div>
                     </div>
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
-                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out2_title">Contactos / Comercios Escaneados</div>
-                        <div id="signals-display" class="text-xl md:text-2xl font-black text-white">1.500+</div>
-                        <div class="text-[10px] text-cyan-glow/80 mt-1" data-i18n="sim_out2_sub">Prospectos mapeados</div>
+                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out2_title">Prueba Social Inyectada</div>
+                        <div id="signals-display" class="text-xl md:text-2xl font-black text-white">144+</div>
+                        <div class="text-[10px] text-cyan-glow/80 mt-1" data-i18n="sim_out2_sub">Comentarios reales de compra</div>
                     </div>
                     <div class="p-4 rounded-2xl bg-black/40 border border-white/5 text-center">
-                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out3_title">Ciclo Estimado de Cierre</div>
-                        <div id="window-display" class="text-xl md:text-2xl font-black text-emerald-400">10 a 20 días</div>
-                        <div class="text-[10px] text-slate-500 mt-1" data-i18n="sim_out3_sub">Velocidad de incorporación</div>
+                        <div class="mono text-[10px] text-slate-400 uppercase mb-1" data-i18n="sim_out3_title">Ahorro Estimado en Ads</div>
+                        <div id="window-display" class="text-xl md:text-2xl font-black text-emerald-400">$264 USD</div>
+                        <div class="text-[10px] text-slate-500 mt-1" data-i18n="sim_out3_sub">Ahorro por menor CPA</div>
                     </div>
                 </div>
 
                 <div class="text-center">
-                    <a href="https://wa.me/5491158432412?text=Hola,%20hice%20una%20simulaci%C3%B3n%20para%20mi%20empresa%20y%20quiero%20conocer%20la%20factibilidad%20comercial"
+                    <a href="https://wa.me/5491158432412?text=Hola,%20hice%20el%20c%C3%A1lculo%20en%20la%20web%20y%20quiero%20hacer%20la%20prueba%20gratuita%20en%20vivo%20en%20mi%20cuenta"
                         target="_blank"
                         class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-glow to-blue-500 text-black px-8 py-3.5 rounded-full font-bold text-sm hover:opacity-95 transition-all glow-cyan cursor-pointer">
-                        <span data-i18n="sim_cta">Validar Factibilidad de mi Proyecto</span>
+                        <span data-i18n="sim_cta">Probar AlgoBoost en mis Videos (Sesión 15 min)</span>
                         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
                     </a>
                 </div>
@@ -669,7 +773,7 @@
                     Mirá Cómo Despega tu Último Post en 3 Minutos
                 </h2>
                 <p class="text-slate-300 text-base md:text-lg mb-10 max-w-2xl mx-auto" data-i18n="final_sub">
-                    Agendamos una llamada de 15 minutos por Google Meet. Auditamos tu cuenta, ejecutamos la prueba en vivo en tu última publicación y mirás la comparativa online.
+                    Coordinamos una sesión en vivo de 15 minutos (por videollamada o directo por WhatsApp). Auditamos tu cuenta, ejecutamos la prueba en tiempo real en tu última publicación y ves los resultados en directo.
                 </p>
                 <a href="https://wa.me/5491158432412?text=Hola,%20quiero%20agendar%20la%20Sesi%C3%B3n%20en%20Vivo%20de%2015%20minutos%20para%20probar%20TMKT%20AlgoBoost%20en%20nuestro%20posteo"
                     target="_blank"
@@ -713,32 +817,25 @@
     <script>
         let currentLang = 'es';
 
-        // Simulator Logic
+        // Simulator Logic (AlgoBoost Video Calculator)
         function updateSimulator(val) {
-            const capacity = parseInt(val);
-            const slotWord = currentLang === 'pt' ? 'Clientes / Lojas' : (currentLang === 'en' ? 'Clients / Stores' : 'Clientes / Comercios');
+            const posts = parseInt(val);
+            const postWord = currentLang === 'pt' ? 'Vídeos / Posts por mês' : (currentLang === 'en' ? 'Videos / Posts per month' : 'Videos / Posts al mes');
             const capDisplay = document.getElementById('capacity-display');
-            if (capDisplay) capDisplay.innerText = capacity.toLocaleString() + ' ' + slotWord;
+            if (capDisplay) capDisplay.innerText = posts + ' ' + postWord;
 
-            const reachMin = Math.round(capacity * 1200).toLocaleString();
-            const reachMax = Math.round(capacity * 2800).toLocaleString();
+            const reachMin = Math.round(posts * 2200).toLocaleString();
+            const reachMax = Math.round(posts * 5500).toLocaleString();
             const reachDisplay = document.getElementById('reach-display');
             if (reachDisplay) reachDisplay.innerText = `${reachMin} - ${reachMax}`;
 
-            const signals = Math.round(capacity * 30).toLocaleString() + '+';
+            const comments = Math.round(posts * 12).toLocaleString() + '+';
             const signalsDisplay = document.getElementById('signals-display');
-            if (signalsDisplay) signalsDisplay.innerText = signals;
+            if (signalsDisplay) signalsDisplay.innerText = comments;
 
-            let windowDays = "10 a 20 días";
-            if (capacity > 300) {
-                windowDays = currentLang === 'en' ? "30 to 45 days" : (currentLang === 'pt' ? "30 a 45 dias" : "30 a 45 días");
-            } else if (capacity > 100) {
-                windowDays = currentLang === 'en' ? "20 to 30 days" : (currentLang === 'pt' ? "20 a 30 dias" : "20 a 30 días");
-            } else {
-                windowDays = currentLang === 'en' ? "10 to 20 days" : (currentLang === 'pt' ? "10 a 20 dias" : "10 a 20 días");
-            }
+            const savings = "$" + Math.round(posts * 22).toLocaleString() + " USD";
             const windowDisplay = document.getElementById('window-display');
-            if (windowDisplay) windowDisplay.innerText = windowDays;
+            if (windowDisplay) windowDisplay.innerText = savings;
         }
 
         const translations = {
@@ -814,24 +911,24 @@
                 plan_badge: "Soluciones Productizadas TMKT",
                 plan_title: "Planes Oficiales & Prospección B2B",
                 plan_subtitle: "Desde aceleración de publicaciones de marcas hasta apertura masiva de puntos de venta llave en mano.",
-                sim_badge: "Simulador de Proyección de Demanda",
-                sim_title: "Proyecte la Escala Comercial de su Empresa",
-                sim_subtitle: "Ajuste su objetivo mensual de nuevos comercios minoristas o clientes mayoristas para estimar la infraestructura requerida.",
-                sim_label: "Objetivo Mensual de Puntos de Venta / Clientes:",
-                sim_step_1: "10 (Nivel Inicial)",
-                sim_step_2: "50 (Escala Regional)",
-                sim_step_3: "200 (Expansión Nacional)",
-                sim_step_4: "500+ (Dominación de Mercado)",
-                sim_out1_title: "Impacto de Alcance Satelital",
-                sim_out1_sub: "Vistas orgánicas calificadas",
-                sim_out2_title: "Contactos / Comercios Escaneados",
-                sim_out2_sub: "Prospectos mapeados",
-                sim_out3_title: "Ciclo Estimado de Cierre",
-                sim_out3_sub: "Velocidad de incorporación",
-                sim_cta: "Validar Factibilidad de mi Proyecto",
+                sim_badge: "Calculadora de Retorno Algorítmico",
+                sim_title: "Proyectá el Impacto en tus Publicaciones",
+                sim_subtitle: "Ajustá la cantidad de videos que publicás por mes para proyectar el alcance estimado, los comentarios de compra y el ahorro publicitario.",
+                sim_label: "Frecuencia Mensual de Publicación:",
+                sim_step_1: "4 (1 por semana)",
+                sim_step_2: "12 (3 por semana)",
+                sim_step_3: "20 (5 por semana)",
+                sim_step_4: "30 (1 diario)",
+                sim_out1_title: "Alcance Orgánico Estimado",
+                sim_out1_sub: "Vistas calificadas de nicho",
+                sim_out2_title: "Prueba Social Inyectada",
+                sim_out2_sub: "Comentarios reales de compra",
+                sim_out3_title: "Ahorro Estimado en Ads",
+                sim_out3_sub: "Ahorro por menor CPA",
+                sim_cta: "Probar AlgoBoost en mis Videos (Sesión 15 min)",
                 final_badge: "Demostración en Tiempo Real",
                 final_title: "Mirá Cómo Despega tu Último Post en 3 Minutos",
-                final_sub: "Agendamos una llamada de 15 minutos por Google Meet. Auditamos tu cuenta, ejecutamos la prueba en vivo en tu última publicación y mirás la comparativa online.",
+                final_sub: "Coordinamos una sesión en vivo de 15 minutos (por videollamada o directo por WhatsApp). Auditamos tu cuenta, ejecutamos la prueba en tiempo real en tu última publicación y ves los resultados en directo.",
                 cta_final: "Agendar Sesión de 15 min + Prueba en Vivo",
                 cta_subnote: "Sin contraseñas. Sin instalaciones. Cupos limitados por rubro para garantizar exclusividad.",
                 footer_privacy: "Privacidad",
@@ -907,26 +1004,26 @@
                 sec_ecom_obj: "Objetivo: Volume & Redução de CPA",
                 sec_ecom_rot: "Alta Rotatividade",
                 plan_badge: "Soluções TMKT",
-                plan_title: "Planos Oficiais & Prospecção B2B",
+                plan_title: "Planos Oficiais & Prospeção B2B",
                 plan_subtitle: "Do impulso em posts à abertura massiva de clientes em atacado.",
-                sim_badge: "Simulador de Demanda",
-                sim_title: "Projete a Escala Comercial",
-                sim_subtitle: "Ajuste sua meta mensal de novos clientes para estimar infraestrutura.",
-                sim_label: "Meta Mensal de Lojas / Clientes:",
-                sim_step_1: "10 (Inicial)",
-                sim_step_2: "50 (Regional)",
-                sim_step_3: "200 (Nacional)",
-                sim_step_4: "500+ (Liderança)",
-                sim_out1_title: "Impacto de Alcance Satelital",
+                sim_badge: "Calculadora de Retorno Algorítmico",
+                sim_title: "Projete o Impacto nas suas Publicações",
+                sim_subtitle: "Ajuste o número de vídeos publicados por mês para projetar o alcance, prova social e economia em anúncios.",
+                sim_label: "Frequência Mensal de Publicação:",
+                sim_step_1: "4 (1 por semana)",
+                sim_step_2: "12 (3 por semana)",
+                sim_step_3: "20 (5 por semana)",
+                sim_step_4: "30 (1 diário)",
+                sim_out1_title: "Alcance Orgânico Estimado",
                 sim_out1_sub: "Visualizações qualificadas",
-                sim_out2_title: "Contatos / Lojas Mapeadas",
-                sim_out2_sub: "Prospects identificados",
-                sim_out3_title: "Ciclo de Fechamento",
-                sim_out3_sub: "Velocidade de incorporação",
-                sim_cta: "Validar Viabilidade do Projeto",
+                sim_out2_title: "Prova Social Injetada",
+                sim_out2_sub: "Comentários reais de compra",
+                sim_out3_title: "Economia Estimada em Ads",
+                sim_out3_sub: "Economia por menor CPA",
+                sim_cta: "Testar AlgoBoost nos meus Vídeos (Sessão 15 min)",
                 final_badge: "Demonstração em Tempo Real",
                 final_title: "Veja seu Último Post Decolar em 3 Minutos",
-                final_sub: "Agendamos uma chamada de 15 minutos no Google Meet. Auditamos seu perfil, testamos no seu último post e mostramos o resultado ao vivo.",
+                final_sub: "Coordenamos uma sessão ao vivo de 15 minutos (por chamada de vídeo ou direto pelo WhatsApp). Auditamos seu perfil, testamos no seu último post e mostramos o resultado ao vivo.",
                 cta_final: "Agendar Sessão de 15 min + Teste ao Vivo",
                 cta_subnote: "Sem senhas. Sem instalações. Vagas limitadas por região.",
                 footer_privacy: "Privacidade",
@@ -1004,24 +1101,24 @@
                 plan_badge: "TMKT Solutions",
                 plan_title: "Official Plans & B2B Prospecting",
                 plan_subtitle: "From single post acceleration to full turnkey retail store acquisition.",
-                sim_badge: "Demand Projection Simulator",
-                sim_title: "Project Your Commercial Scale",
-                sim_subtitle: "Adjust your monthly target of retail stores or wholesale clients.",
-                sim_label: "Monthly Target of Accounts / Clients:",
-                sim_step_1: "10 (Initial Level)",
-                sim_step_2: "50 (Regional Scale)",
-                sim_step_3: "200 (National Expansion)",
-                sim_step_4: "500+ (Market Leadership)",
-                sim_out1_title: "Satellite Reach Impact",
-                sim_out1_sub: "Qualified organic views",
-                sim_out2_title: "Mapped Prospects / Stores",
-                sim_out2_sub: "Scanned accounts",
-                sim_out3_title: "Estimated Deal Cycle",
-                sim_out3_sub: "Onboarding velocity",
-                sim_cta: "Validate Project Feasibility",
+                sim_badge: "Algorithmic ROI Calculator",
+                sim_title: "Project Your Monthly Content Impact",
+                sim_subtitle: "Adjust your monthly video publishing frequency to estimate organic reach, social proof, and ad spend savings.",
+                sim_label: "Monthly Publishing Frequency:",
+                sim_step_1: "4 (1 per week)",
+                sim_step_2: "12 (3 per week)",
+                sim_step_3: "20 (5 per week)",
+                sim_step_4: "30 (Daily)",
+                sim_out1_title: "Estimated Organic Reach",
+                sim_out1_sub: "Qualified niche views",
+                sim_out2_title: "Injected Social Proof",
+                sim_out2_sub: "Real buying comments",
+                sim_out3_title: "Estimated Ad Savings",
+                sim_out3_sub: "Savings from lower CPA",
+                sim_cta: "Test AlgoBoost on My Videos (15-Min Session)",
                 final_badge: "Real-Time Demonstration",
                 final_title: "Watch Your Latest Post Break Out in 3 Minutes",
-                final_sub: "Book a quick 15-minute Google Meet call. We audit your profile, run a live test on your latest post, and show you the online comparison.",
+                final_sub: "We arrange a 15-minute live session (via video call or directly on WhatsApp). We audit your profile, run a live test on your latest post, and show you real-time results.",
                 cta_final: "Book 15-Min Live Session + Live Test",
                 cta_subnote: "No passwords. No installations. Limited slots per niche for exclusivity.",
                 footer_privacy: "Privacy",
