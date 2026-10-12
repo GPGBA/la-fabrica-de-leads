@@ -15,7 +15,7 @@
     <meta property="og:title" content="TMKT ALGOBOOST — Aceleración Algorítmica & Demanda B2B" />
     <meta property="og:description"
         content="Inyectamos retención y prueba social en los primeros 15 minutos de tus videos. Rompe el algoritmo, abarata tu costo publicitario y activa demanda comercial." />
-    <meta property="og:image" content="images/kanban.png" />
+    <meta property="og:image" content="favicon.png" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -73,14 +73,14 @@
         }
 
         .glass {
-            background: rgba(11, 17, 30, 0.75);
+            background: rgba(11, 17, 30, 0.78);
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.08);
         }
 
         .glass-card {
-            background: linear-gradient(135deg, rgba(16, 23, 38, 0.7) 0%, rgba(10, 15, 26, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(16, 23, 38, 0.75) 0%, rgba(10, 15, 26, 0.92) 100%);
             backdrop-filter: blur(14px);
             border: 1px solid rgba(255, 255, 255, 0.07);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -101,7 +101,7 @@
         }
 
         .hero-bg-gradient {
-            background: radial-gradient(circle at 50% 20%, rgba(13, 89, 242, 0.18) 0%, rgba(0, 242, 255, 0.06) 35%, rgba(7, 9, 14, 0.95) 70%, rgba(7, 9, 14, 1) 100%);
+            background: radial-gradient(circle at 50% 20%, rgba(13, 89, 242, 0.18) 0%, rgba(0, 242, 255, 0.06) 35%, rgba(7, 9, 14, 0.92) 70%, rgba(7, 9, 14, 1) 100%);
         }
 
         /* Range Slider */
@@ -154,7 +154,7 @@
         <a href="#" class="flex items-center gap-3">
             <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-glow to-primary-blue p-0.5 shadow-lg shadow-cyan-glow/20">
                 <div class="w-full h-full bg-[#07090E] rounded-[10px] flex items-center justify-center">
-                    <span class="text-cyan-glow font-mono font-bold text-sm">TMKT</span>
+                    <span class="text-cyan-glow font-mono font-bold text-xs">TMKT</span>
                 </div>
             </div>
             <div>
@@ -194,7 +194,13 @@
     <main>
         <!-- Hero Section -->
         <section class="relative min-h-screen flex items-center justify-center px-4 pt-28 pb-20 overflow-hidden hero-bg-gradient">
-            <div class="max-w-6xl text-center z-10 px-2">
+            <!-- Background Video from turismomkt.com -->
+            <video autoplay loop muted playsinline class="absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none">
+                <source src="hero-bg.mp4" type="video/mp4">
+            </video>
+            <div class="absolute inset-0 bg-gradient-to-b from-[#07090E]/60 via-[#07090E]/80 to-[#07090E] pointer-events-none"></div>
+
+            <div class="max-w-6xl text-center z-10 px-2 relative">
                 <!-- Badge -->
                 <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-cyan-glow/30 bg-cyan-glow/10 backdrop-blur-md">
                     <div class="w-2 h-2 rounded-full bg-cyan-glow animate-pulse"></div>
@@ -257,12 +263,12 @@
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 pb-6 border-b border-white/5 mb-8">
                         <div class="flex items-center gap-3">
                             <span class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></span>
-                            <span class="mono text-xs font-bold text-cyan-glow uppercase tracking-wider">
+                            <span class="mono text-xs font-bold text-cyan-glow uppercase tracking-wider" data-i18n="cockpit_title">
                                 TMKT ENGINE // MONITOR DE ACELERACIÓN ALGORÍTMICA EN VIVO
                             </span>
                         </div>
                         <div class="mono text-[11px] text-slate-400 bg-black/40 px-3 py-1.5 rounded-full border border-white/5">
-                            Ventana de Inyección: <span class="text-white font-bold">Primeros 15 Minutos</span>
+                            <span data-i18n="cockpit_window_label">Ventana de Inyección:</span> <span class="text-white font-bold" data-i18n="cockpit_window_val">Primeros 15 Minutos</span>
                         </div>
                     </div>
 
@@ -271,28 +277,28 @@
                         <!-- Left: Sin AlgoBoost -->
                         <div class="p-6 rounded-2xl bg-[#090D17] border border-red-500/20 relative">
                             <div class="flex justify-between items-center mb-4">
-                                <span class="mono text-xs text-red-400 font-bold uppercase">❌ Publicación Convencional</span>
-                                <span class="text-[10px] mono px-2.5 py-1 rounded bg-red-500/10 text-red-400">Sin Impulso</span>
+                                <span class="mono text-xs text-red-400 font-bold uppercase" data-i18n="cockpit_left_tag">❌ Publicación Convencional</span>
+                                <span class="text-[10px] mono px-2.5 py-1 rounded bg-red-500/10 text-red-400" data-i18n="cockpit_left_badge">Sin Impulso</span>
                             </div>
-                            <h4 class="text-lg font-bold text-slate-200 mb-1">Algoritmo Estancado</h4>
-                            <p class="text-xs text-slate-400 mb-6">El video se publica y no recibe tracción inmediata. La plataforma detiene la distribución.</p>
+                            <h4 class="text-lg font-bold text-slate-200 mb-1" data-i18n="cockpit_left_title">Algoritmo Estancado</h4>
+                            <p class="text-xs text-slate-400 mb-6" data-i18n="cockpit_left_desc">El video se publica y no recibe tracción inmediata. La plataforma detiene la distribución.</p>
 
                             <!-- Metrics Box -->
                             <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-black/50 border border-white/5 text-center mb-4">
                                 <div>
                                     <div class="text-base font-black text-slate-300">214</div>
-                                    <div class="text-[10px] text-slate-500 mono">Reproducciones</div>
+                                    <div class="text-[10px] text-slate-500 mono" data-i18n="cockpit_m_views">Reproducciones</div>
                                 </div>
                                 <div>
                                     <div class="text-base font-black text-slate-300">4</div>
-                                    <div class="text-[10px] text-slate-500 mono">Likes</div>
+                                    <div class="text-[10px] text-slate-500 mono" data-i18n="cockpit_m_likes">Likes</div>
                                 </div>
                                 <div>
                                     <div class="text-base font-black text-red-400">0</div>
-                                    <div class="text-[10px] text-slate-500 mono">Comentarios</div>
+                                    <div class="text-[10px] text-slate-500 mono" data-i18n="cockpit_m_comments">Comentarios</div>
                                 </div>
                             </div>
-                            <div class="p-3 rounded-xl bg-red-950/20 border border-red-500/20 text-xs text-red-300/80">
+                            <div class="p-3 rounded-xl bg-red-950/20 border border-red-500/20 text-xs text-red-300/80" data-i18n="cockpit_left_warning">
                                 ⚠️ Resultado: Instagram y TikTok sepultan el post a los 45 minutos. Cero ventas generadas.
                             </div>
                         </div>
@@ -300,38 +306,38 @@
                         <!-- Right: Con TMKT AlgoBoost -->
                         <div class="p-6 rounded-2xl bg-[#0B1528] border border-cyan-glow/40 relative glow-cyan">
                             <div class="flex justify-between items-center mb-4">
-                                <span class="mono text-xs text-cyan-glow font-bold uppercase">⚡ Con TMKT AlgoBoost</span>
-                                <span class="text-[10px] mono px-2.5 py-1 rounded bg-cyan-glow/20 text-cyan-glow font-bold animate-pulse">Recomendado en Explorar</span>
+                                <span class="mono text-xs text-cyan-glow font-bold uppercase" data-i18n="cockpit_right_tag">⚡ Con TMKT AlgoBoost</span>
+                                <span class="text-[10px] mono px-2.5 py-1 rounded bg-cyan-glow/20 text-cyan-glow font-bold animate-pulse" data-i18n="cockpit_right_badge">Recomendado en Explorar</span>
                             </div>
-                            <h4 class="text-lg font-bold text-white mb-1">Ruptura Algorítmica Activa</h4>
-                            <p class="text-xs text-slate-300 mb-6">Inyección de retención y prueba social humana antes de los 15 min. Fuerza la entrega viral.</p>
+                            <h4 class="text-lg font-bold text-white mb-1" data-i18n="cockpit_right_title">Ruptura Algorítmica Activa</h4>
+                            <p class="text-xs text-slate-300 mb-6" data-i18n="cockpit_right_desc">Inyección de retención y prueba social humana antes de los 15 min. Fuerza la entrega viral.</p>
 
                             <!-- Metrics Box -->
                             <div class="grid grid-cols-3 gap-2 p-3 rounded-xl bg-black/60 border border-cyan-glow/20 text-center mb-4">
                                 <div>
                                     <div class="text-base font-black text-cyan-glow">4.820+</div>
-                                    <div class="text-[10px] text-slate-300 mono">Reproducciones</div>
+                                    <div class="text-[10px] text-slate-300 mono" data-i18n="cockpit_m_views">Reproducciones</div>
                                 </div>
                                 <div>
                                     <div class="text-base font-black text-white">412</div>
-                                    <div class="text-[10px] text-slate-300 mono">Likes</div>
+                                    <div class="text-[10px] text-slate-300 mono" data-i18n="cockpit_m_likes">Likes</div>
                                 </div>
                                 <div>
                                     <div class="text-base font-black text-emerald-400">56</div>
-                                    <div class="text-[10px] text-slate-300 mono">Comentarios</div>
+                                    <div class="text-[10px] text-slate-300 mono" data-i18n="cockpit_m_comments">Comentarios</div>
                                 </div>
                             </div>
 
                             <!-- Real Contextual Comments Feed -->
                             <div class="space-y-2 p-3 rounded-xl bg-black/40 border border-white/5 text-[11px] font-mono">
                                 <div class="flex items-center gap-2 text-slate-300">
-                                    <span class="text-cyan-glow font-bold">@sofia_moda:</span> "¿Tienen stock en talle M y hacen envíos al interior?"
+                                    <span class="text-cyan-glow font-bold">@sofia_moda:</span> <span data-i18n="cockpit_c1">"¿Tienen stock en talle M y hacen envíos al interior?"</span>
                                 </div>
                                 <div class="flex items-center gap-2 text-slate-300">
-                                    <span class="text-cyan-glow font-bold">@distribuidora_norte:</span> "Hola! Me pasarías lista de precios y compra mínima?"
+                                    <span class="text-cyan-glow font-bold">@distribuidora_norte:</span> <span data-i18n="cockpit_c2">"Hola! Me pasarías lista de precios y compra mínima?"</span>
                                 </div>
                                 <div class="flex items-center gap-2 text-slate-300">
-                                    <span class="text-cyan-glow font-bold">@martin_g:</span> "¿A qué hora abren hoy? ¿Hay que reservar mesa?"
+                                    <span class="text-cyan-glow font-bold">@martin_g:</span> <span data-i18n="cockpit_c3">"¿A qué hora abren hoy? ¿Hay que reservar mesa?"</span>
                                 </div>
                             </div>
                         </div>
@@ -586,72 +592,72 @@
                     <!-- PLAN 1: Impulso -->
                     <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border border-white/5">
                         <div>
-                            <div class="mono text-[11px] text-slate-400 font-bold uppercase mb-2">PLAN 01 // IMPULSO</div>
-                            <h3 class="text-xl font-bold text-white mb-2">Validación Inicial</h3>
-                            <div class="text-3xl font-black text-cyan-glow mb-4">$57 <span class="text-xs font-normal text-slate-400">USD / mes</span></div>
-                            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            <div class="mono text-[11px] text-slate-400 font-bold uppercase mb-2" data-i18n="plan_1_badge">PLAN 01 // IMPULSO</div>
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="plan_1_title">Validación Inicial</h3>
+                            <div class="text-3xl font-black text-cyan-glow mb-4">$57 <span class="text-xs font-normal text-slate-400" data-i18n="plan_1_per">USD / mes</span></div>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-6" data-i18n="plan_1_desc">
                                 Ideal para marcas y locales que publican 3 veces por semana y quieren romper el tope de las 200 vistas.
                             </p>
                             <ul class="space-y-3 text-xs font-mono text-slate-300 mb-8">
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 12 publicaciones / mes (3x por semana)</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Empuje algorítmico en primeros 20 min</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Comentarios contextuales humanos de compra</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Gestión directa por WhatsApp (Fricción Cero)</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_1_f1">12 publicaciones / mes (3x por semana)</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_1_f2">Empuje algorítmico en primeros 20 min</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_1_f3">Comentarios contextuales humanos de compra</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_1_f4">Gestión directa por WhatsApp (Fricción Cero)</span></li>
                             </ul>
                         </div>
                         <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20activar%20el%20Plan%20Impulso%20de%20$57%20USD"
                             target="_blank"
                             class="w-full text-center py-3.5 bg-white/5 hover:bg-white/10 text-white font-bold text-xs rounded-xl border border-white/10 transition-all cursor-pointer">
-                            Elegir Plan Impulso ($57)
+                            <span data-i18n="plan_1_btn">Elegir Plan Impulso ($57)</span>
                         </a>
                     </div>
 
                     <!-- PLAN 2: Crecimiento (Recomendado) -->
                     <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border-2 border-cyan-glow relative shadow-lg shadow-cyan-glow/10">
-                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-cyan-glow text-black mono text-[10px] font-black uppercase tracking-wider shadow-md">
+                        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-cyan-glow text-black mono text-[10px] font-black uppercase tracking-wider shadow-md" data-i18n="plan_2_popular">
                             MÁS ELEGIDO // ALTO RENDIMIENTO
                         </div>
                         <div>
-                            <div class="mono text-[11px] text-cyan-glow font-bold uppercase mb-2">PLAN 02 // CRECIMIENTO</div>
-                            <h3 class="text-xl font-bold text-white mb-2">Exposición Total</h3>
-                            <div class="text-3xl font-black text-cyan-glow mb-4">$97 <span class="text-xs font-normal text-slate-400">USD / mes</span></div>
-                            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            <div class="mono text-[11px] text-cyan-glow font-bold uppercase mb-2" data-i18n="plan_2_badge">PLAN 02 // CRECIMIENTO</div>
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="plan_2_title">Exposición Total</h3>
+                            <div class="text-3xl font-black text-cyan-glow mb-4">$97 <span class="text-xs font-normal text-slate-400" data-i18n="plan_2_per">USD / mes</span></div>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-6" data-i18n="plan_2_desc">
                                 Para marcas activas que buscan empuje continuo y atracción de público nuevo geolocalizado.
                             </p>
                             <ul class="space-y-3 text-xs font-mono text-slate-300 mb-8">
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 20 publicaciones / mes (5x por semana)</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Todo lo del Plan 1 (Impulso 20 min)</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Difusión y réplica en cuentas de nicho</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Cobertura prioritaria en franjas nocturnas y findes</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_2_f1">20 publicaciones / mes (5x por semana)</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_2_f2">Todo lo del Plan 1 (Impulso 20 min)</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_2_f3">Difusión y réplica en cuentas de nicho</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_2_f4">Cobertura prioritaria en franjas nocturnas y findes</span></li>
                             </ul>
                         </div>
                         <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20activar%20el%20Plan%20Crecimiento%20de%20$97%20USD"
                             target="_blank"
                             class="w-full text-center py-3.5 bg-gradient-to-r from-cyan-glow to-blue-500 text-black font-extrabold text-xs rounded-xl shadow-lg transition-all hover:opacity-95 cursor-pointer glow-cyan">
-                            Elegir Plan Crecimiento ($97)
+                            <span data-i18n="plan_2_btn">Elegir Plan Crecimiento ($97)</span>
                         </a>
                     </div>
 
                     <!-- PLAN 3: Dominación Diaria -->
                     <div class="glass-card p-8 rounded-3xl flex flex-col justify-between border border-white/5">
                         <div>
-                            <div class="mono text-[11px] text-slate-400 font-bold uppercase mb-2">PLAN 03 // DIARIO FULL</div>
-                            <h3 class="text-xl font-bold text-white mb-2">Dominación Diaria</h3>
-                            <div class="text-3xl font-black text-cyan-glow mb-4">$127 <span class="text-xs font-normal text-slate-400">USD / mes</span></div>
-                            <p class="text-slate-400 text-xs leading-relaxed mb-6">
+                            <div class="mono text-[11px] text-slate-400 font-bold uppercase mb-2" data-i18n="plan_3_badge">PLAN 03 // DIARIO FULL</div>
+                            <h3 class="text-xl font-bold text-white mb-2" data-i18n="plan_3_title">Dominación Diaria</h3>
+                            <div class="text-3xl font-black text-cyan-glow mb-4">$127 <span class="text-xs font-normal text-slate-400" data-i18n="plan_3_per">USD / mes</span></div>
+                            <p class="text-slate-400 text-xs leading-relaxed mb-6" data-i18n="plan_3_desc">
                                 Para marcas y cadenas que publican todos los días y exigen máxima tracción continua.
                             </p>
                             <ul class="space-y-3 text-xs font-mono text-slate-300 mb-8">
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> 30 publicaciones / mes (1 post diario garantizado)</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Máxima prioridad de inyección y retención</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Replicación constante en red de satélites</li>
-                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> Reporte mensual avanzado de rendimiento</li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_3_f1">30 publicaciones / mes (1 post diario garantizado)</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_3_f2">Máxima prioridad de inyección y retención</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_3_f3">Replicación constante en red de satélites</span></li>
+                                <li class="flex items-center gap-2"><span class="text-cyan-glow font-bold">✓</span> <span data-i18n="plan_3_f4">Reporte mensual avanzado de rendimiento</span></li>
                             </ul>
                         </div>
                         <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20activar%20el%20Plan%20Dominaci%C3%B3n%20de%20$127%20USD"
                             target="_blank"
                             class="w-full text-center py-3.5 bg-white/5 hover:bg-white/10 text-white font-bold text-xs rounded-xl border border-white/10 transition-all cursor-pointer">
-                            Elegir Plan Diario ($127)
+                            <span data-i18n="plan_3_btn">Elegir Plan Diario ($127)</span>
                         </a>
                     </div>
                 </div>
@@ -661,42 +667,42 @@
                     <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
                         <div class="max-w-3xl">
                             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 border border-blue-400/40 mono text-[10px] text-blue-300 font-bold uppercase mb-4">
-                                <span>🏭 B2B // SOLUCIÓN LLAVE EN MANO PARA FABRICANTES & IMPORTADORES</span>
+                                <span data-i18n="b2b_badge">🏭 B2B // SOLUCIÓN LLAVE EN MANO PARA FABRICANTES & IMPORTADORES</span>
                             </div>
-                            <h3 class="text-2xl md:text-3xl font-black text-white mb-3">
+                            <h3 class="text-2xl md:text-3xl font-black text-white mb-3" data-i18n="b2b_title">
                                 Apertura Masiva de Puntos de Venta & Prospección Mayorista
                             </h3>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                            <p class="text-slate-300 text-sm leading-relaxed mb-6" data-i18n="b2b_desc">
                                 Olvidate de los viajantes tradicionales y los costos fijos. Escaneamos tu mercado y llevamos tu catálogo mayorista directo al WhatsApp de dueños y encargados de compras listos para comprar por bulto cerrado.
                             </p>
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-mono text-slate-300">
                                 <div class="flex items-center gap-2">
-                                    <span class="text-cyan-glow font-bold">✓</span> <strong>1.500 a 3.000+</strong> comercios contactados por mes
+                                    <span class="text-cyan-glow font-bold">✓</span> <span data-i18n="b2b_f1"><strong>1.500 a 3.000+</strong> comercios contactados por mes</span>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-cyan-glow font-bold">✓</span> Catálogo digital entregado en WhatsApp a compradores
+                                    <span class="text-cyan-glow font-bold">✓</span> <span data-i18n="b2b_f2">Catálogo digital entregado en WhatsApp a compradores</span>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-cyan-glow font-bold">✓</span> Derivación de clientes listos a tu equipo
+                                    <span class="text-cyan-glow font-bold">✓</span> <span data-i18n="b2b_f3">Derivación de clientes listos a tu equipo</span>
                                 </div>
                                 <div class="flex items-center gap-2">
-                                    <span class="text-cyan-glow font-bold">✓</span> AlgoBoost Corporativo incluido para blindar tu marca
+                                    <span class="text-cyan-glow font-bold">✓</span> <span data-i18n="b2b_f4">AlgoBoost Corporativo incluido para blindar tu marca</span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Price & CTA Column -->
                         <div class="lg:text-right w-full lg:w-auto flex flex-col items-start lg:items-end gap-3 min-w-[240px]">
-                            <div class="mono text-xs text-slate-400 uppercase">Inversión Mensual Llave en Mano</div>
+                            <div class="mono text-xs text-slate-400 uppercase" data-i18n="b2b_price_label">Inversión Mensual Llave en Mano</div>
                             <div class="text-3xl md:text-4xl font-black text-white">
-                                $400 - $600 <span class="text-xs font-normal text-slate-400">USD</span>
+                                $400 - $600 <span class="text-xs font-normal text-slate-400" data-i18n="b2b_per">USD</span>
                             </div>
                             <a href="https://wa.me/5491158432412?text=Hola,%20quisiera%20solicitar%20la%20Prospecci%C3%B3n%20Mayorista%20B2B%20Llave%20en%20Mano%20(1500%20a%203000%20comercios)"
                                 target="_blank"
                                 class="w-full sm:w-auto text-center px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-glow text-black font-extrabold text-xs rounded-xl shadow-lg transition-all hover:opacity-95 cursor-pointer glow-cyan">
-                                Consultar Expansión Mayorista B2B
+                                <span data-i18n="b2b_btn">Consultar Expansión Mayorista B2B</span>
                             </a>
-                            <span class="text-[10px] mono text-slate-400">Exclusividad por rubro y zona geográfica</span>
+                            <span class="text-[10px] mono text-slate-400" data-i18n="b2b_subnote">Exclusividad por rubro y zona geográfica</span>
                         </div>
                     </div>
                 </div>
@@ -859,6 +865,24 @@
                 pill_3: "0 Herramientas (Fricción Cero)",
                 cta_hero_main: "Agendar Sesión en Vivo (15 min) + Prueba Gratuita",
                 cta_hero_sec: "Ver los 6 Beneficios",
+                cockpit_title: "TMKT ENGINE // MONITOR DE ACELERACIÓN ALGORÍTMICA EN VIVO",
+                cockpit_window_label: "Ventana de Inyección:",
+                cockpit_window_val: "Primeros 15 Minutos",
+                cockpit_left_tag: "❌ Publicación Convencional",
+                cockpit_left_badge: "Sin Impulso",
+                cockpit_left_title: "Algoritmo Estancado",
+                cockpit_left_desc: "El video se publica y no recibe tracción inmediata. La plataforma detiene la distribución.",
+                cockpit_m_views: "Reproducciones",
+                cockpit_m_likes: "Likes",
+                cockpit_m_comments: "Comentarios",
+                cockpit_left_warning: "⚠️ Resultado: Instagram y TikTok sepultan el post a los 45 minutos. Cero ventas generadas.",
+                cockpit_right_tag: "⚡ Con TMKT AlgoBoost",
+                cockpit_right_badge: "Recomendado en Explorar",
+                cockpit_right_title: "Ruptura Algorítmica Activa",
+                cockpit_right_desc: "Inyección de retención y prueba social humana antes de los 15 min. Fuerza la entrega viral.",
+                cockpit_c1: "\"¿Tienen stock en talle M y hacen envíos al interior?\"",
+                cockpit_c2: "\"Hola! Me pasarías lista de precios y compra mínima?\"",
+                cockpit_c3: "\"¿A qué hora abren hoy? ¿Hay que reservar mesa?\"",
                 ben_badge: "Impacto Comercial Garantizado",
                 ben_title: "Los 6 Beneficios de TMKT AlgoBoost",
                 ben_subtitle: "El algoritmo de Instagram y TikTok decide en los primeros 15 minutos si viraliza o sepulta un video. Diseñamos el motor que fuerza el resultado.",
@@ -911,6 +935,45 @@
                 plan_badge: "Soluciones Productizadas TMKT",
                 plan_title: "Planes Oficiales & Prospección B2B",
                 plan_subtitle: "Desde aceleración de publicaciones de marcas hasta apertura masiva de puntos de venta llave en mano.",
+                plan_1_badge: "PLAN 01 // IMPULSO",
+                plan_1_title: "Validación Inicial",
+                plan_1_per: "USD / mes",
+                plan_1_desc: "Ideal para marcas y locales que publican 3 veces por semana y quieren romper el tope de las 200 vistas.",
+                plan_1_f1: "12 publicaciones / mes (3x por semana)",
+                plan_1_f2: "Empuje algorítmico en primeros 20 min",
+                plan_1_f3: "Comentarios contextuales humanos de compra",
+                plan_1_f4: "Gestión directa por WhatsApp (Fricción Cero)",
+                plan_1_btn: "Elegir Plan Impulso ($57)",
+                plan_2_popular: "MÁS ELEGIDO // ALTO RENDIMIENTO",
+                plan_2_badge: "PLAN 02 // CRECIMIENTO",
+                plan_2_title: "Exposición Total",
+                plan_2_per: "USD / mes",
+                plan_2_desc: "Para marcas activas que buscan empuje continuo y atracción de público nuevo geolocalizado.",
+                plan_2_f1: "20 publicaciones / mes (5x por semana)",
+                plan_2_f2: "Todo lo del Plan 1 (Impulso 20 min)",
+                plan_2_f3: "Difusión y réplica en cuentas de nicho",
+                plan_2_f4: "Cobertura prioritaria en franjas nocturnas y findes",
+                plan_2_btn: "Elegir Plan Crecimiento ($97)",
+                plan_3_badge: "PLAN 03 // DIARIO FULL",
+                plan_3_title: "Dominación Diaria",
+                plan_3_per: "USD / mes",
+                plan_3_desc: "Para marcas y cadenas que publican todos los días y exigen máxima tracción continua.",
+                plan_3_f1: "30 publicaciones / mes (1 post diario garantizado)",
+                plan_3_f2: "Máxima prioridad de inyección y retención",
+                plan_3_f3: "Replicación constante en red de satélites",
+                plan_3_f4: "Reporte mensual avanzado de rendimiento",
+                plan_3_btn: "Elegir Plan Diario ($127)",
+                b2b_badge: "🏭 B2B // SOLUCIÓN LLAVE EN MANO PARA FABRICANTES & IMPORTADORES",
+                b2b_title: "Apertura Masiva de Puntos de Venta & Prospección Mayorista",
+                b2b_desc: "Olvidate de los viajantes tradicionales y los costos fijos. Escaneamos tu mercado y llevamos tu catálogo mayorista directo al WhatsApp de dueños y encargados de compras listos para comprar por bulto cerrado.",
+                b2b_f1: "<strong>1.500 a 3.000+</strong> comercios contactados por mes",
+                b2b_f2: "Catálogo digital entregado en WhatsApp a compradores",
+                b2b_f3: "Derivación de clientes listos a tu equipo",
+                b2b_f4: "AlgoBoost Corporativo incluido para blindar tu marca",
+                b2b_price_label: "Inversión Mensual Llave en Mano",
+                b2b_per: "USD",
+                b2b_btn: "Consultar Expansión Mayorista B2B",
+                b2b_subnote: "Exclusividad por rubro y zona geográfica",
                 sim_badge: "Calculadora de Retorno Algorítmico",
                 sim_title: "Proyectá el Impacto en tus Publicaciones",
                 sim_subtitle: "Ajustá la cantidad de videos que publicás por mes para proyectar el alcance estimado, los comentarios de compra y el ahorro publicitario.",
@@ -954,6 +1017,24 @@
                 pill_3: "0 Ferramentas (Fricção Zero)",
                 cta_hero_main: "Agendar Sessão ao Vivo (15 min) + Teste Gratuito",
                 cta_hero_sec: "Ver os 6 Benefícios",
+                cockpit_title: "TMKT ENGINE // MONITOR DE ACELERAÇÃO ALGORÍTMICA AO VIVO",
+                cockpit_window_label: "Janela de Injeção:",
+                cockpit_window_val: "Primeiros 15 Minutos",
+                cockpit_left_tag: "❌ Publicação Convencional",
+                cockpit_left_badge: "Sem Impulso",
+                cockpit_left_title: "Algoritmo Estagnado",
+                cockpit_left_desc: "O vídeo é postado e não recebe tração inicial. A plataforma corta a entrega.",
+                cockpit_m_views: "Visualizações",
+                cockpit_m_likes: "Curtidas",
+                cockpit_m_comments: "Comentários",
+                cockpit_left_warning: "⚠️ Resultado: Instagram e TikTok ocultam o post aos 45 minutos. Zero vendas geradas.",
+                cockpit_right_tag: "⚡ Com TMKT AlgoBoost",
+                cockpit_right_badge: "Recomendado no Explorar",
+                cockpit_right_title: "Ruptura Algorítmica Ativa",
+                cockpit_right_desc: "Injeção de retenção e prova social humana nos primeiros 15 min. Força a entrega viral.",
+                cockpit_c1: "\"Vocês têm estoque no tamanho M e enviam para outros estados?\"",
+                cockpit_c2: "\"Olá! Poderia me passar a tabela de preços e pedido mínimo no atacado?\"",
+                cockpit_c3: "\"Que horas vocês abrem hoje? Precisa reservar mesa?\"",
                 ben_badge: "Impacto Comercial Garantido",
                 ben_title: "Os 6 Benefícios do TMKT AlgoBoost",
                 ben_subtitle: "O algoritmo decide nos primeiros 15 minutos se entrega ou oculta seu vídeo. Nós forçamos o resultado.",
@@ -1006,6 +1087,45 @@
                 plan_badge: "Soluções TMKT",
                 plan_title: "Planos Oficiais & Prospeção B2B",
                 plan_subtitle: "Do impulso em posts à abertura massiva de clientes em atacado.",
+                plan_1_badge: "PLANO 01 // IMPULSO",
+                plan_1_title: "Validação Inicial",
+                plan_1_per: "USD / mês",
+                plan_1_desc: "Ideal para marcas e lojas que postam 3 vezes por semana e querem romper o teto de 200 views.",
+                plan_1_f1: "12 postagens / mês (3x por semana)",
+                plan_1_f2: "Impulso algorítmico nos primeiros 20 min",
+                plan_1_f3: "Comentários contextuais humanos de compra",
+                plan_1_f4: "Gestão direta pelo WhatsApp (Fricção Zero)",
+                plan_1_btn: "Escolher Plano Impulso ($57)",
+                plan_2_popular: "MAIS ESCOLHIDO // ALTA PERFORMANCE",
+                plan_2_badge: "PLANO 02 // CRESCIMENTO",
+                plan_2_title: "Exposição Total",
+                plan_2_per: "USD / mês",
+                plan_2_desc: "Para marcas ativas que buscam impulso contínuo e atração de novos clientes geolocalizados.",
+                plan_2_f1: "20 postagens / mês (5x por semana)",
+                plan_2_f2: "Tudo do Plano 1 (Impulso 20 min)",
+                plan_2_f3: "Difusão e replicação em contas de nicho",
+                plan_2_f4: "Cobertura prioritária em horários de pico e fins de semana",
+                plan_2_btn: "Escolher Plano Crescimento ($97)",
+                plan_3_badge: "PLANO 03 // DIÁRIO FULL",
+                plan_3_title: "Dominação Diária",
+                plan_3_per: "USD / mês",
+                plan_3_desc: "Para marcas e redes que postam todos os dias e exigem tração máxima constante.",
+                plan_3_f1: "30 postagens / mês (1 post diário garantido)",
+                plan_3_f2: "Prioridade máxima de injeção e retenção",
+                plan_3_f3: "Replicação contínua em rede de satélites",
+                plan_3_f4: "Relatório mensal avançado de desempenho",
+                plan_3_btn: "Escolher Plano Diário ($127)",
+                b2b_badge: "🏭 B2B // SOLUÇÃO PRONTA PARA FABRICANTES & IMPORTADORES",
+                b2b_title: "Abertura Massiva de Lojas & Prospecção Atacadista",
+                b2b_desc: "Esqueça os representantes tradicionais e custos fixos. Mapeamos seu mercado e entregamos seu catálogo de atacado direto no WhatsApp de compradores prontos para fechar pedidos em grande volume.",
+                b2b_f1: "<strong>1.500 a 3.000+</strong> lojistas contatados por mês",
+                b2b_f2: "Catálogo digital entregue no WhatsApp de compradores",
+                b2b_f3: "Encaminhamento de clientes prontos para sua equipe",
+                b2b_f4: "AlgoBoost Corporativo incluído para blindar sua marca",
+                b2b_price_label: "Investimento Mensal Chave na Mão",
+                b2b_per: "USD",
+                b2b_btn: "Consultar Expansão Atacadista B2B",
+                b2b_subnote: "Exclusividade por segmento e região geográfica",
                 sim_badge: "Calculadora de Retorno Algorítmico",
                 sim_title: "Projete o Impacto nas suas Publicações",
                 sim_subtitle: "Ajuste o número de vídeos publicados por mês para projetar o alcance, prova social e economia em anúncios.",
@@ -1049,6 +1169,24 @@
                 pill_3: "0 Tools (Zero Friction)",
                 cta_hero_main: "Book 15-Min Live Session + Free Test",
                 cta_hero_sec: "Explore the 6 Benefits",
+                cockpit_title: "TMKT ENGINE // LIVE ALGORITHMIC ACCELERATION MONITOR",
+                cockpit_window_label: "Injection Window:",
+                cockpit_window_val: "First 15 Minutes",
+                cockpit_left_tag: "❌ Conventional Post",
+                cockpit_left_badge: "No Boost",
+                cockpit_left_title: "Stagnant Algorithm",
+                cockpit_left_desc: "The video is published without initial traction. Platforms quickly stop distributing it.",
+                cockpit_m_views: "Views",
+                cockpit_m_likes: "Likes",
+                cockpit_m_comments: "Comments",
+                cockpit_left_warning: "⚠️ Outcome: Instagram and TikTok bury the post within 45 minutes. Zero sales generated.",
+                cockpit_right_tag: "⚡ With TMKT AlgoBoost",
+                cockpit_right_badge: "Recommended on Explore",
+                cockpit_right_title: "Active Algorithmic Breakout",
+                cockpit_right_desc: "Injection of retention and human social proof within 15 min. Forces viral platform delivery.",
+                cockpit_c1: "\"Do you have size M in stock and offer nationwide shipping?\"",
+                cockpit_c2: "\"Hi! Could you share wholesale price list and minimum order quantity?\"",
+                cockpit_c3: "\"What time do you open today? Do we need to reserve a table?\"",
                 ben_badge: "Guaranteed Commercial Impact",
                 ben_title: "The 6 Core Benefits of TMKT AlgoBoost",
                 ben_subtitle: "Algorithms decide whether to promote or bury your video in the first 15 minutes. We force the breakout.",
@@ -1101,6 +1239,45 @@
                 plan_badge: "TMKT Solutions",
                 plan_title: "Official Plans & B2B Prospecting",
                 plan_subtitle: "From single post acceleration to full turnkey retail store acquisition.",
+                plan_1_badge: "PLAN 01 // BOOST",
+                plan_1_title: "Initial Validation",
+                plan_1_per: "USD / month",
+                plan_1_desc: "Ideal for brands and businesses posting 3 times a week looking to break the 200-view ceiling.",
+                plan_1_f1: "12 posts / month (3x per week)",
+                plan_1_f2: "Algorithmic boost within the first 20 min",
+                plan_1_f3: "Human buying-intent comments",
+                plan_1_f4: "Direct WhatsApp operation (Zero Friction)",
+                plan_1_btn: "Choose Boost Plan ($57)",
+                plan_2_popular: "MOST POPULAR // HIGH PERFORMANCE",
+                plan_2_badge: "PLAN 02 // GROWTH",
+                plan_2_title: "Full Exposure",
+                plan_2_per: "USD / month",
+                plan_2_desc: "For active brands seeking continuous momentum and fresh localized buyer acquisition.",
+                plan_2_f1: "20 posts / month (5x per week)",
+                plan_2_f2: "Everything in Plan 1 (20-min boost)",
+                plan_2_f3: "Distribution and replication across niche network",
+                plan_2_f4: "Priority coverage during evening and weekend peaks",
+                plan_2_btn: "Choose Growth Plan ($97)",
+                plan_3_badge: "PLAN 03 // DAILY FULL",
+                plan_3_title: "Daily Domination",
+                plan_3_per: "USD / month",
+                plan_3_desc: "For brands and retail chains posting daily that require maximum uninterrupted traction.",
+                plan_3_f1: "30 posts / month (1 guaranteed daily post)",
+                plan_3_f2: "Top priority watch-time & retention injection",
+                plan_3_f3: "Continuous amplification across satellite accounts",
+                plan_3_f4: "Advanced monthly performance analytics",
+                plan_3_btn: "Choose Daily Plan ($127)",
+                b2b_badge: "🏭 B2B // TURNKEY SOLUTION FOR MANUFACTURERS & IMPORTERS",
+                b2b_title: "Mass Retail Store Expansion & Wholesale Prospecting",
+                b2b_desc: "Say goodbye to traditional traveling reps and fixed overhead. We scan your market and deliver your wholesale catalog directly to retail buyers on WhatsApp ready for bulk purchasing.",
+                b2b_f1: "<strong>1,500 to 3,000+</strong> retail stores contacted monthly",
+                b2b_f2: "Digital catalog delivered directly to buyer WhatsApps",
+                b2b_f3: "Qualified inbound retail buyers routed to your sales team",
+                b2b_f4: "Corporate AlgoBoost included to reinforce brand authority",
+                b2b_price_label: "Turnkey Monthly Investment",
+                b2b_per: "USD",
+                b2b_btn: "Inquire About B2B Wholesale Expansion",
+                b2b_subnote: "Category and regional geographic exclusivity",
                 sim_badge: "Algorithmic ROI Calculator",
                 sim_title: "Project Your Monthly Content Impact",
                 sim_subtitle: "Adjust your monthly video publishing frequency to estimate organic reach, social proof, and ad spend savings.",
@@ -1141,7 +1318,7 @@
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[lang] && translations[lang][key] !== undefined) {
-                    el.innerText = translations[lang][key];
+                    el.innerHTML = translations[lang][key];
                 }
             });
 
